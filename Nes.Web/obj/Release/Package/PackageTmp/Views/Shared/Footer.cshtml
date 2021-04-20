@@ -1,0 +1,54 @@
+﻿<div id="footer">
+    <div class="footer-in">
+        <div class="hotro">
+            @Html.Raw(ViewBag.Footer)
+        </div><!--end lienhe-->
+        <div id="mn_footer mn_footer1">
+            <h3>Hỗ trợ khách hàng</h3>
+            <ul id="menu-menu_footer1" class="">
+                @foreach (var item in (IEnumerable<Nes.Dal.EntityModels.Menu>)ViewBag.BottomMenu)
+                {
+                    <li class="menu-item"><a href="@item.Link" target="@item.Target">@item.Text</a></li>
+                }
+
+            </ul>
+        </div>
+        <div id="mn_footer mn_footer1">
+            <h3>Danh mục nổi bật</h3>
+            <ul id="menu-menu_footer2" class="">
+                @foreach (var item in (IEnumerable<Nes.Dal.EntityModels.ProductCategory>)ViewBag.HotProductCates)
+                {
+                    <li class="menu-item"><a href="/product/@item.MetaTitle-@item.ID">@item.Title</a></li>
+                }
+
+            </ul>
+        </div>
+        <div id="connect-footer">
+            <h3>Kết nối với chúng tôi</h3>
+            <div id="social-footer">
+                <a id="fb" href="https://www.facebook.com/pages/Newlux-fashion/234183040036395?fref=ts" title="Facebook"></a>
+                <a id="yt" href="https://www.youtube.com/user/Newluxfashion" title="Youtube"></a>
+            </div>
+            <p>Đăng ký nhận bản tin</p>
+            <ul id="emailSub-widget">
+                <div id="emailSub-output" style="display:none;"></div>
+                @using (Html.BeginForm("EmailLetter", "Home", FormMethod.Post, new { @id = "emailSub-form" }))
+                {
+                    <input name="success_msg" id="emailSub-success" value="Đăng ký thành công!" type="hidden" />
+                    <input name="fail_msg" id="emailSub-fail" value="Đăng ký không thành công, email không hợp lệ" type="hidden" />
+                    <input name="email" id="emailSub-email" placeholder="Nhập email đăng ký..." type="text" />
+                    <input id="submit_em" class="submit" value="GO" type="submit" />
+                }
+
+            </ul>
+        </div>
+    </div><!--end footer-in-->
+    <div class="footer-out">
+        <div class="rwidth">
+            <p style="float:left;">© Copyright 2014 <a href="/" title="newlux"><strong>newlux.vn™</strong></a>. All rights reserved</p>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+</div><!--end footer-->

@@ -1,0 +1,71 @@
+﻿@model Nes.Dal.EntityModels.Contact
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript">
+    if (ViewBag.Message != null) {
+        window.alert(@ViewBag.Message);
+    }
+</script>
+<div class="rwidth" id="bread">
+    <!-- Breadcrumb NavXT 5.0.1 -->
+    <span class="home-icon"></span><a title="Go to home." href="/" class="home">Trang chủ</a><span class="bread-icon"></span><span class="curr_bread">Liên hệ</span>
+</div>
+<div class="full single-tintuc">
+    <div class="rwidth page-lienhe" id="main-content">
+        @{Html.RenderAction("NewsCates", "Content");}
+        <div id="right-cate-tin">
+            <div class="showroom" style="margin-top:10px">@Html.Raw(@Model.ContentHtml)</div>
+            <div class="wpcf7" id="wpcf7-f195-p15-o1">
+                @if (TempData["Notification"] != null)
+                {
+                        @TempData["Notification"]
+                }
+                @using (Html.BeginForm("Create", "Feedback", FormMethod.Post, new { @class = "wpcf7-form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+                    <p>
+                        <span class="tit">Họ và Tên bạn *:</span>
+                        <span class="wpcf7-form-control-wrap your-name">
+                            @Html.TextBox("Name", "", new { @class = "wpcf7-form-control", @size = "40" })
+                        </span>
+                    </p>
+                    <p>
+                        <span class="tit">Địa chỉ:</span>
+                        <span class="wpcf7-form-control">
+                            @Html.TextBox("Address", "", new { @class = "wpcf7-form-control", @size = "40" })
+                        </span>
+                    </p>
+                    <p>
+                        <span class="tit">Điện thoại:</span>
+                        <span class="wpcf7-form-control-wrap your-phone">
+                            @Html.TextBox("Phone", "", new { @class = "wpcf7-form-control", @size = "40" })
+                        </span>
+                    </p>
+                    <p>
+                        <span class="tit">Email *:</span>
+                        <span class="wpcf7-form-control">
+                            @Html.TextBox("Email", "", new { @class = "wpcf7-form-control", @size = "40" })
+                        </span>
+                    </p>
+                    <p>
+                        <span class="tit">Nội dung *:</span>
+                        <span class="wpcf7-form-control-wrap your-message">
+                            @Html.TextArea("Message", "", new { @class = "wpcf7-form-control", @cols = "40", @row = "10" })
+                        </span>
+                    </p>
+                    <p>
+                        <span class="tit">
+                        </span>
+                        <input type="submit" value="Gửi liên hệ" class="wpcf7-form-control">
+                    </p>
+                }
+
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Nes.Dal.EntityModels.Product>
+
+@{
+    ViewBag.Title = "Sản phẩm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="full category">
+    <div class="rwidth" id="bread">
+        <!-- Breadcrumb NavXT 5.0.1 -->
+        <span class="home-icon"></span><a title="Go to home." href="/" class="home">Trang chủ</a>
+        <span class="bread-icon"></span><span class="curr_bread">Sản phẩm</span>
+    </div>
+    <div id="content_product" class="product-cate rwidth">
+        @{Html.RenderAction("ProductCates", "Product");}
+        <div class="list-sp">
+            @if (ViewBag.Total > 0)
+            {
+                <div id="sanpham">
+
+                    @for (int i = 0; i < Model.Count(); i++)
+                    {
+                        var item = Model.ElementAt(i);
+                        string splast = (i + 1) % 3 == 0 ? "splast" : string.Empty;
+                        string link = "/product-detail/" + @item.MetaTitle + "-" + @item.ID;
+                        <div class="sp-cat-list @splast">
+                            <a title="@item.ID" class="anhnen" href="@link">
+                                <img width="300" height="406" src="@item.Images" class="attachment-medium wp-post-image" alt="@item.Title" />
+                            </a>
+                            <div class="meta-post-cate">
+                                <h3 class="title uppercase"><a href="@link" title="@item.Title">@item.Title</a></h3>
+                                <p class="price">Giá: @item.Price.ToString("N0") VNĐ</p>
+                                <a class="readmore-cat" href="@link" title="@item.Title">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    }
+
+                </div><!--end sanpham-->
+                if (ViewBag.TotalPage > 1)
+                {
+                    <div class="pagi">
+                        <div class="wp-pagenavi">
+                            <span class="pages">Trang @ViewBag.Page/@ViewBag.TotalPage</span>
+                            @for (int i = 1; i <= ViewBag.TotalPage; i++)
+                            {
+                                if (ViewBag.Page == i)
+                                {
+                                    <span class="current">@i</span>
+                                }
+                                else
+                                {
+                                    @Html.ActionLink(i.ToString(), "Index", "Product", new { page = i }, new { @class = "page larger" })
+                                }
+                            }
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <center><h1>@Nes.Resources.ClientResources.EmptyDataText</h1></center>
+            }
+        </div>
+    </div>
+</div>

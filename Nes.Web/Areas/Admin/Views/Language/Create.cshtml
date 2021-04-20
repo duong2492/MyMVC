@@ -1,0 +1,87 @@
+﻿@model Nes.Dal.EntityModels.Language
+
+@{
+    ViewBag.Title = @Nes.Resources.NesResource.AdminRoleCreateTitlePage;
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">@Nes.Resources.NesResource.AdminLanguageCreateTitlePage</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                @Nes.Resources.NesResource.AdminNoteForm
+            </div>
+            <div class="panel-body">
+                @if (TempData["Notification"] != null)
+                {
+                    @Html.Hidden("NotificationAutoHide", TempData["NotificationAutoHide"])
+                    <div id="NotificationBox" class="@TempData["NotificationCSS"]" style="display: none">
+                        @TempData["Notification"]
+                    </div>
+                }
+                <div class="row">
+                    <div class="col-lg-6">
+                        @using (Html.BeginForm("Create", "Language", FormMethod.Post, new { @role = "form" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary(true)
+
+                            <div class="form-group">
+                                <label>  @Html.LabelFor(model => model.ID)</label>
+
+                                @Html.TextBoxFor(model => model.ID, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.ID)
+                            </div>
+                            <div class="form-group">
+                                <label>  @Html.LabelFor(model => model.Name)</label>
+
+                                @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Name)
+                            </div>
+
+                            <div class="form-group">
+                                <label>
+                                    @Html.LabelFor(model => model.Description)
+                                </label>
+
+                                @Html.TextBoxFor(model => model.Description, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Description)
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    @Html.LabelFor(model => model.IsDefault)
+                                </label>
+                                @Html.CheckBoxFor(model => model.IsDefault)
+                                @Html.ValidationMessageFor(model => model.IsDefault)
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    @Html.LabelFor(model => model.IsActived)
+                                </label>
+                                @Html.CheckBoxFor(model => model.IsActived, new { @checked = "checked" })
+                                @Html.ValidationMessageFor(model => model.IsActived)
+                            </div>
+
+                            <button type="submit" class="btn btn-default">@Nes.Resources.NesResource.AdminSaveButtonText</button>
+
+                            @Html.ActionLink(@Nes.Resources.NesResource.GoBackToListText, "Index");
+                        }
+
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    </div>

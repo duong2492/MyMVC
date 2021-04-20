@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F7B15AB8-7041-4043-A2B5-4EF07C8DACDC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nes.Dal</RootNamespace>
+    <AssemblyName>Nes.Dal</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EntityModels\Cms\About.cs" />
+    <Compile Include="EntityModels\Cms\Album.cs" />
+    <Compile Include="EntityModels\Cms\Category.cs" />
+    <Compile Include="EntityModels\Cms\Contact.cs" />
+    <Compile Include="EntityModels\Cms\Feedback.cs" />
+    <Compile Include="EntityModels\Cms\Footer.cs" />
+    <Compile Include="EntityModels\Cms\GroupSlide.cs" />
+    <Compile Include="EntityModels\Cms\Menu.cs" />
+    <Compile Include="EntityModels\Cms\MenuType.cs" />
+    <Compile Include="EntityModels\Cms\News.cs" />
+    <Compile Include="EntityModels\Cms\NewsTag.cs" />
+    <Compile Include="EntityModels\Cms\Photo.cs" />
+    <Compile Include="EntityModels\Cms\Slide.cs" />
+    <Compile Include="EntityModels\Cms\Tag.cs" />
+    <Compile Include="EntityModels\Cms\Test.cs" />
+    <Compile Include="EntityModels\Core\Function.cs" />
+    <Compile Include="EntityModels\Core\Language.cs" />
+    <Compile Include="EntityModels\Core\Permission.cs" />
+    <Compile Include="EntityModels\Core\Role.cs" />
+    <Compile Include="EntityModels\Core\SystemConfig.cs" />
+    <Compile Include="EntityModels\Core\User.cs" />
+    <Compile Include="EntityModels\Core\UserActivityLog.cs" />
+    <Compile Include="EntityModels\Core\UserGroup.cs" />
+    <Compile Include="EntityModels\Core\UserRole.cs" />
+    <Compile Include="EntityModels\Pms\Product.cs" />
+    <Compile Include="EntityModels\Pms\ProductCategory.cs" />
+    <Compile Include="Infrastructure\NesDbContext.cs" />
+    <Compile Include="Infrastructure\Repository.cs" />
+    <Compile Include="Infrastructure\UnitOfWork.cs" />
+    <Compile Include="Interfaces\IDbContextFactory.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\IUnitOfWork.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Nes.Common\Nes.Common.csproj">
+      <Project>{e88777c8-fcaa-4d3e-ba26-3b337ce548d1}</Project>
+      <Name>Nes.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nes.Resources\Nes.Resources.csproj">
+      <Project>{d1b04d2b-2793-4bb1-a1b6-33f0cb4f70e2}</Project>
+      <Name>Nes.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

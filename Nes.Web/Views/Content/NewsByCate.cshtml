@@ -1,0 +1,71 @@
+﻿@model Nes.Web.Models.NewsListViewModel
+@{
+    ViewBag.Title = @Model.Category.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="rwidth" id="bread">
+    <!-- Breadcrumb NavXT 5.0.1 -->
+    <span class="home-icon"></span><a title="Go to home." href="/" class="home">Trang chủ</a><span class="bread-icon"></span><span class="curr_bread">Tin tức</span>
+</div>
+<div id="content_new" class="rwidth">
+    <div id="content_product" class="product-cate rwidth">
+        @if (Request.Url.AbsoluteUri.Contains("gioi-thieu") || Request.Url.AbsoluteUri.Contains("gioi-thieu-5"))
+        {
+            Html.RenderAction("AboutCates", "Content");
+        }
+        else
+        {
+            Html.RenderAction("NewsCates", "Content");
+        }
+            
+        <div id="right-cate-tin">
+            @if (ViewBag.Total > 0)
+            {
+                <div class="list-new">
+                    @foreach (var item in Model.NewsList)
+                    {
+                        string link = "/news-detail/" + item.MetaTitle + "-" + item.ID;
+
+                        <div class="widget_new bg_color 0">
+                            <div class="widget_new_content">
+                                <a class="thumb-new-cat" href="@link">
+                                    <img src="@item.Images" />
+                                </a>
+                                <div class="post">
+                                    <h3><a href="@link">@item.Title</a></h3>
+                                    <p>@item.Description</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+                </div>
+                if (ViewBag.TotalPage > 1)
+                {
+                    <div class="pagi">
+                        <div class="wp-pagenavi">
+                            <span class="pages">Page @ViewBag.Page of @ViewBag.TotalPage</span>
+                            @for (int i = 1; i <= ViewBag.TotalPage; i++)
+                            {
+                                if (ViewBag.Page == i)
+                                {
+                                    <span class="current">@i</span>
+                                }
+                                else
+                                {
+                                    @Html.ActionLink(i.ToString(), "Index", "Content", new { page = i }, new { @class = "page larger" })
+                                }
+                            }
+                            <a href="@ViewBag.Next" class="nextpostslink">»</a>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <center><h1>@Nes.Resources.ClientResources.EmptyDataText</h1></center>
+            }
+        </div>
+    </div>
+
+</div>

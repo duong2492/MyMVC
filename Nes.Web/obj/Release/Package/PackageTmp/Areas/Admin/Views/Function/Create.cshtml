@@ -1,0 +1,121 @@
+﻿@model Nes.Dal.EntityModels.Function
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">@Nes.Resources.NesResource.AdminFunctionCreateTitlePage</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                @Nes.Resources.NesResource.AdminNoteForm
+            </div>
+            <div class="panel-body">
+                @if (TempData["Notification"] != null)
+                {
+                    @Html.Hidden("NotificationAutoHide", TempData["NotificationAutoHide"])
+                    <div id="NotificationBox" class="@TempData["NotificationCSS"]" style="display: none">
+                        @TempData["Notification"]
+                    </div>
+                }
+                <div class="row">
+                    <div class="col-lg-10">
+                        @using (Html.BeginForm("Create", "Function", FormMethod.Post, new { @role = "form" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary(true,string.Empty, new { @class = "text-danger" })
+                            <div class="form-group">
+                                <label> @Html.LabelFor(model => model.ID)</label>
+                                @Html.TextBoxFor(model => model.ID, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.ID, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <label> @Html.LabelFor(model => model.Name)</label>
+                                @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    @Html.LabelFor(model => model.Description)
+                                </label>
+                                @Html.TextBoxFor(model => model.Description, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    @Html.LabelFor(model => model.Text)
+                                </label>
+                                @Html.TextBoxFor(model => model.Text, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Text, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    @Html.LabelFor(model => model.Link)
+                                </label>
+                                @Html.TextBoxFor(model => model.Link, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Link, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    @Html.LabelFor(model => model.Target)
+                                </label>
+                                @Html.DropDownListFor(model => model.Target,
+                                     new List<SelectListItem>()
+                                        {
+                                        new SelectListItem { Text = @Nes.Resources.NesResource.AdminOpenSameWindowText, Value = "_self" },
+                                        new SelectListItem { Text = @Nes.Resources.NesResource.AdminOpenNewWindowText,  Value = "_blank" },
+                                        }, new { @class = "form-control" })
+                                @Html.ValidationMessage("Target", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    @Html.LabelFor(model => model.Order)
+                                </label>
+                                @Html.TextBoxFor(model => model.Order, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Order, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    @Html.LabelFor(model => model.CssClass)
+                                </label>
+                                @Html.TextBoxFor(model => model.CssClass, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.CssClass, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <label>@Html.LabelFor(model => model.ParentID)</label>
+                                @Html.DropDownListFor(model => model.ParentID, (SelectList)ViewBag.Parents, @Nes.Resources.NesResource.AdminEmptySelectionTextForFunction, new { @class = "form-control" })
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    @Html.LabelFor(model => model.IsLocked)
+                                </label>
+                                <div class="checkbox">
+                                    @Html.CheckBoxFor(model => model.IsLocked, new { @checked = "checked" })
+                                    @Html.ValidationMessageFor(model => model.IsLocked, "", new { @class = "text-danger" })
+                                </div>
+
+                            </div>
+
+                            <button type="submit" class="btn btn-default">@Nes.Resources.NesResource.AdminSaveButtonText</button>
+
+                            @Html.ActionLink(@Nes.Resources.NesResource.GoBackToListText, "Index");
+                        }
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->

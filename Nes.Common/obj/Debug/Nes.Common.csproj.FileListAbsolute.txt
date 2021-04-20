@@ -1,0 +1,30 @@
+D:\ESVN\Source\NES2\NES\Nes.Common\bin\Debug\Nes.Common.dll
+D:\ESVN\Source\NES2\NES\Nes.Common\bin\Debug\Nes.Common.pdb
+D:\ESVN\Source\NES2\NES\Nes.Common\bin\Debug\log4net.dll
+D:\ESVN\Source\NES2\NES\Nes.Common\obj\Debug\Nes.Common.dll
+D:\ESVN\Source\NES2\NES\Nes.Common\obj\Debug\Nes.Common.pdb
+D:\ESVN\Source\NES2\NES\Nes.Common\bin\Debug\PagedList.dll
+D:\ESVN\Source\NES2\NES\Nes.Common\bin\Debug\PagedList.Mvc.dll
+D:\ESVN\Source\NES2\NES\Nes.Common\bin\Debug\PagedList.xml
+D:\ESVN\Source\NES2\NES\Nes.Common\bin\Debug\PagedList.Mvc.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Common\bin\Debug\Nes.Common.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Common\bin\Debug\Nes.Common.pdb
+E:\ESVN\Source Code\NES2\NES\Nes.Common\bin\Debug\log4net.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Common\bin\Debug\PagedList.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Common\bin\Debug\PagedList.Mvc.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Common\bin\Debug\PagedList.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Common\bin\Debug\PagedList.Mvc.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Common\obj\Debug\Nes.Common.csprojResolveAssemblyReference.cache
+E:\ESVN\Source Code\NES2\NES\Nes.Common\obj\Debug\Nes.Common.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Common\obj\Debug\Nes.Common.pdb
+D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Common\bin\Debug\Nes.Common.dll
+D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Common\bin\Debug\Nes.Common.pdb
+D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Common\bin\Debug\log4net.dll
+D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Common\bin\Debug\PagedList.dll
+D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Common\bin\Debug\PagedList.Mvc.dll
+D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Common\bin\Debug\PagedList.xml
+D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Common\bin\Debug\PagedList.Mvc.xml
+D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Common\obj\Debug\Nes.Common.csproj.CoreCompileInputs.cache
+D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Common\obj\Debug\Nes.Common.csproj.CopyComplete
+D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Common\obj\Debug\Nes.Common.dll
+D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Common\obj\Debug\Nes.Common.pdb

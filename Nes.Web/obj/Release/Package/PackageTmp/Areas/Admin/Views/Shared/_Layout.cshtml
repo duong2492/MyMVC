@@ -1,0 +1,100 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <!-- Core CSS - Include with every page -->
+    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.8.24.min.js"></script>
+    <link href="~/Content/themes/admin/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/themes/admin/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Page-Level Plugin CSS - Dashboard -->
+    <link href="~/Content/themes/admin/css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+    <link href="~/Content/themes/admin/css/plugins/timeline/timeline.css" rel="stylesheet">
+
+    <!-- SB Admin CSS - Include with every page -->
+    <link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+    <link href="~/Content/themes/admin/css/sb-admin.css" rel="stylesheet">
+    <link href="~/Content/themes/admin/css/custom.css" rel="stylesheet">
+    <!-- Page-Level Plugin CSS - Tables -->
+    <link href="~/Content/themes/admin/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    @*@Styles.Render("~/Content/themes/admin/common");
+    @Styles.Render("~/Content/themes/admin/dashboard");*@
+    <!-- Core Scripts - Include with every page -->
+    @*@Scripts.Render("~/bundles/adminjs")
+        @Scripts.Render("~/bundles/dashboardjs")*@
+    <!-- Page-Level Plugin Scripts - Dashboard -->
+    <!-- Core Scripts - Include with every page -->
+
+    <script src="~/Scripts/admin/bootstrap.min.js"></script>
+    <script src="~/Scripts/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <!-- SB Admin Scripts - Include with every page -->
+    <script src="~/Scripts/admin/sb-admin.js"></script>
+    <!-- Page-Level Plugin Scripts - Tables -->
+    <script src="~/Scripts/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="~/Scripts/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script src="~/Scripts/dialogmessage.js"></script>
+    <script src="~/Scripts/Plugins/ckfinder/ckfinder.js" type="text/javascript"></script>
+    <script src="~/Scripts/Plugins/ckeditor/ckeditor.js" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $('#dataTables').dataTable({
+                "iDisplayLength": 50,
+                "oSearch": {
+                    "sZeroRecords": "@Nes.Resources.NesResource.AdminNoRecordMessage"
+                }
+            });
+            $("#NotificationBox").fadeIn(1000);
+
+            if ($("#NotificationAutoHide").val() == "true") {
+                $("#NotificationBox").delay(1000).slideUp(500);
+            }
+           
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            SetDialog();
+            $("#btnSelectImg").click(function () {
+                var finder = new CKFinder();
+                finder.selectActionFunction = function (fileUrl) {
+                    $('#txtImgUrl').val(fileUrl);
+                };
+                finder.popup();
+            });
+            var editor = CKEDITOR.replace('contenteditor', {
+                customConfig: '/Scripts/Plugins/ckeditor/article.js',
+            });
+            $("#datepicker").datepicker({dateFormat: 'dd/mm/yy' });
+        });
+
+    </script>
+
+</head>
+<body>
+    <div id="wrapper">
+        @{Html.RenderPartial("_TopNavBar");}
+        <!-- /.navbar-static-top -->
+
+        <!-- /.navbar-static-top -->     
+        @{Html.RenderAction("_MainMenu", "Navigation");}   
+        <!-- /.navbar-static-side -->
+
+        <div id="page-wrapper">
+            @RenderBody()
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+</body>
+</html>

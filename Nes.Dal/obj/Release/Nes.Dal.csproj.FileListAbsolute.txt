@@ -1,0 +1,26 @@
+D:\ESVN\Source\NES2\NES\Nes.Dal\bin\Release\Nes.Dal.dll.config
+D:\ESVN\Source\NES2\NES\Nes.Dal\bin\Release\Nes.Dal.dll
+D:\ESVN\Source\NES2\NES\Nes.Dal\bin\Release\Nes.Dal.pdb
+D:\ESVN\Source\NES2\NES\Nes.Dal\bin\Release\EntityFramework.dll
+D:\ESVN\Source\NES2\NES\Nes.Dal\bin\Release\Nes.Common.dll
+D:\ESVN\Source\NES2\NES\Nes.Dal\bin\Release\Nes.Resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Dal\bin\Release\log4net.dll
+D:\ESVN\Source\NES2\NES\Nes.Dal\bin\Release\Nes.Common.pdb
+D:\ESVN\Source\NES2\NES\Nes.Dal\bin\Release\Nes.Resources.pdb
+D:\ESVN\Source\NES2\NES\Nes.Dal\bin\Release\EntityFramework.xml
+D:\ESVN\Source\NES2\NES\Nes.Dal\obj\Release\Nes.Dal.csprojResolveAssemblyReference.cache
+D:\ESVN\Source\NES2\NES\Nes.Dal\obj\Release\Nes.Dal.dll
+D:\ESVN\Source\NES2\NES\Nes.Dal\obj\Release\Nes.Dal.pdb
+E:\ESVN\Source Code\NES2\NES\Nes.Dal\bin\Release\Nes.Dal.dll.config
+E:\ESVN\Source Code\NES2\NES\Nes.Dal\bin\Release\Nes.Dal.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Dal\bin\Release\Nes.Dal.pdb
+E:\ESVN\Source Code\NES2\NES\Nes.Dal\bin\Release\EntityFramework.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Dal\bin\Release\Nes.Common.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Dal\bin\Release\Nes.Resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Dal\bin\Release\log4net.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Dal\bin\Release\Nes.Common.pdb
+E:\ESVN\Source Code\NES2\NES\Nes.Dal\bin\Release\Nes.Resources.pdb
+E:\ESVN\Source Code\NES2\NES\Nes.Dal\bin\Release\EntityFramework.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Dal\obj\Release\Nes.Dal.csprojResolveAssemblyReference.cache
+E:\ESVN\Source Code\NES2\NES\Nes.Dal\obj\Release\Nes.Dal.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Dal\obj\Release\Nes.Dal.pdb

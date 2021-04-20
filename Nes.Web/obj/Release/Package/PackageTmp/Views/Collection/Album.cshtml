@@ -1,0 +1,80 @@
+﻿@model Nes.Web.Models.PhotoViewModel
+<link href="~/Content/themes/client/css/jquery.fancybox.css" rel="stylesheet" type="text/css" />
+<script src="~/Scripts/client/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".fancybox").fancybox({
+            maxWidth: 800,
+            maxHeight: 600,
+            fitToView: false,
+            autoSize: true,
+            closeClick: false,
+            openEffect: 'elastic',
+            closeEffect: 'elastic',
+            helpers: {
+                title: {
+                    type: 'over'
+                },
+                overlay: {
+                    speedOut: 100
+                },
+            }
+        });
+        $(".fancybox2").fancybox({
+            maxWidth: 800,
+            maxHeight: 500,
+            fitToView: true,
+            autoSize: true,
+            closeClick: true,
+            openEffect: 'elastic',
+            closeEffect: 'elastic',
+        });
+    });
+</script>
+@{
+    ViewBag.Title = "Album";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="full category-tintuc">
+    <div class="rwidth" id="bread">
+        <!-- Breadcrumb NavXT 5.0.1 -->
+        <span class="home-icon"></span><a title="Go to home." href="/" class="home">Trang chủ</a><span class="bread-icon"></span>
+        <a title="Go to the Sản phẩm." href="/collection" class="taxonomy category">Bộ sưu tập</a>
+        <span class="bread-icon"></span><a title="Go to the @Model.Album.Title." href="/Collection/Album/@Model.Album.ID" class="taxonomy category">@Model.Album.Title</a>
+    </div>
+    <div id="content_new" class="rwidth">
+        @{Html.RenderAction("AlbumList", "Collection");}
+        <div id="right-cate-tin">
+            <div class="nghesy-single">
+                <div class="header-gach">
+                    <h1 class="title-gach">
+                        <span>@Model.Album.Title</span>
+                    </h1>
+                </div>
+                <div class="the_content">
+                </div>
+                <div class="clear">
+                </div>
+                <ul class="list-image-album">
+                    @for (int i = 0; i < Model.PhotoList.Count(); i++)
+                    {
+                        var item = Model.PhotoList.ElementAt(i);
+                        string last = (i + 1) % 3 == 0 ? "img-last" : string.Empty;
+                        <li class="@last">
+                            <a href="@item.Images"
+                               class="fancybox2" data-fancybox-group="gallery">
+                                <img alt="@item.Title" src="@item.Images" style="max-height: 500px;">
+                            </a>
+                        </li>
+                        if (!string.IsNullOrEmpty(last))
+                        {
+                            <div class="clear"></div>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>

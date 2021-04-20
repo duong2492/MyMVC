@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Nes.Dal.EntityModels.Album>
+
+@{
+    ViewBag.Title = "Collection";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="full category-album">
+    <div class="rwidth" id="bread">
+        <!-- Breadcrumb NavXT 5.0.1 -->
+        <span class="home-icon"></span><a title="Go to home." href="/" class="home">Trang chủ</a>
+        <span class="bread-icon"></span><span class="curr_bread">Bộ sưu tập</span>
+    </div>
+    <div class="rwidth">
+        <ul class="list-image-album cat-album">
+            @for (int i = 0; i < Model.Count(); i++)
+            {
+                var item = Model.ElementAt(i);
+                string link = "/album/"+ item.MetaTitle +"-" + item.ID;
+                string last = (i + 1) % 4 == 0 ? "img-last" : string.Empty;
+                if (!string.IsNullOrEmpty(last))
+                {
+                    <div class="clear"></div>
+                }
+                <li class="@last">
+                    <div class="ls-album chan">
+                        <a title="@item.Title" class="thumb" href="@link">
+                            <img width="300" height="406" src="@item.Images" class="attachment-medium wp-post-image" alt="@item.Title">
+                        </a>
+                        <h2><a href="@link">@item.Title</a></h2>
+                    </div>
+                </li>
+            }
+
+        </ul>
+        <!--/.artist-list-->
+        <div class="clear"></div>
+        <div class="pagi pagi-bottom">
+        </div>
+    </div>
+</div>

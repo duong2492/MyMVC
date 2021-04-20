@@ -1,0 +1,37 @@
+﻿@model HandleErrorInfo
+@{
+    
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">@Nes.Resources.NesResource.ErrorPageTitle</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <!-- /.col-lg-6 -->
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+               @Nes.Resources.NesResource.ErrorDetailText
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="alert alert-danger alert-dismissable">
+                    <p>
+                        Controller: @Model.ControllerName <br>
+                        Action: @Model.ActionName
+                        Exception: @Model.Exception
+                    </p>
+                    <a href="/admin/account/index" class="alert-link">@Nes.Resources.NesResource.AdminHomePageTitleText</a>.
+                </div>
+            </div>
+            <!-- .panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-6 -->
+</div>

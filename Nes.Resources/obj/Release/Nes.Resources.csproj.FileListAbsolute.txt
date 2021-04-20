@@ -1,0 +1,16 @@
+D:\ESVN\Source\NES2\NES\Nes.Resources\bin\Release\Nes.Resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Resources\bin\Release\Nes.Resources.pdb
+D:\ESVN\Source\NES2\NES\Nes.Resources\obj\Release\Nes.Resources.NesResource.resources
+D:\ESVN\Source\NES2\NES\Nes.Resources\obj\Release\Nes.Resources.csproj.GenerateResource.Cache
+D:\ESVN\Source\NES2\NES\Nes.Resources\obj\Release\Nes.Resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Resources\obj\Release\Nes.Resources.pdb
+D:\ESVN\Source\NES2\NES\Nes.Resources\obj\Release\Nes.Resources.csprojResolveAssemblyReference.cache
+D:\ESVN\Source\NES2\NES\Nes.Resources\obj\Release\Nes.Resources.ClientResources.resources
+E:\ESVN\Source Code\NES2\NES\Nes.Resources\bin\Release\Nes.Resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Resources\bin\Release\Nes.Resources.pdb
+E:\ESVN\Source Code\NES2\NES\Nes.Resources\obj\Release\Nes.Resources.csprojResolveAssemblyReference.cache
+E:\ESVN\Source Code\NES2\NES\Nes.Resources\obj\Release\Nes.Resources.ClientResources.resources
+E:\ESVN\Source Code\NES2\NES\Nes.Resources\obj\Release\Nes.Resources.NesResource.resources
+E:\ESVN\Source Code\NES2\NES\Nes.Resources\obj\Release\Nes.Resources.csproj.GenerateResource.Cache
+E:\ESVN\Source Code\NES2\NES\Nes.Resources\obj\Release\Nes.Resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Resources\obj\Release\Nes.Resources.pdb

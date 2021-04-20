@@ -1,0 +1,58 @@
+﻿@model Nes.Web.Areas.Admin.Models.PermissionViewModel
+@using MvcCheckBoxList.Model
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">@Nes.Resources.NesResource.AdminPermistionDiviTitlePage @Model.UserGroup.Name</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                @Nes.Resources.NesResource.AdminNoteForm
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="row">
+                    @using (Html.BeginForm("Update", "Permission", FormMethod.Post, new { @role = "form" }))
+                    {
+                        @Html.HiddenFor(model => model.UserGroup)
+                        <div class="col-lg-6">
+
+                            <div class="form-group">
+                                <label>@Html.LabelFor(model => model.AvailableFunctions)</label>
+                                @Html.ListBoxFor(model =>model.PostedFunctions,Model.AvailableFunctions)
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6">
+
+                            <div class="form-group">
+                                <label>@Html.LabelFor(model => model.AvailableRoles)</label>
+                                @Html.CheckBoxListFor(model => model.PostedRoles.RoleIds,
+                                                      model => model.AvailableRoles,
+                                                      role => role.ID,
+                                                      role => role.Name,
+                                                      model => model.SelectedRoles,
+                                                Position.Vertical, x => new { @class = "checkbox" })
+                            </div>
+
+
+                        </div>
+                        <button type="submit" class="btn btn-default">@Nes.Resources.NesResource.AdminSaveButtonText</button>
+                        <button type="button" onclick="window.location.href='@Url.Action("Index", "UserGroup", null)'" class="btn btn-default">@Nes.Resources.NesResource.GoBackToListText</button>
+                    }
+                </div>
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>

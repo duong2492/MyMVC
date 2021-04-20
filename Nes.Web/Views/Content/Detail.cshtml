@@ -1,0 +1,72 @@
+﻿@model Nes.Web.Models.NewsDetailViewModel
+@{
+    ViewBag.Title = @Model.NewsDetail.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="full category">
+    <div class="rwidth" id="bread">
+         Breadcrumb NavXT 5.0.1 
+        <span class="home-icon"></span><a title="Go to home." href="/" class="home">Trang chủ</a><span class="bread-icon"></span>
+        <a title="Go to the tin tức." href="/news" class="taxonomy category">Tin tức</a>
+        <span class="bread-icon"></span>
+        <a title="Go to the @Model.Category.Title." href="/news/@Model.Category.MetaTitle-@Model.Category.ID" class="taxonomy category">@Model.Category.Title</a>
+        <span class="bread-icon"></span><span class="curr_bread">@Model.NewsDetail.Title</span>
+    </div>
+    <div id="content_product" class="product-cate rwidth">
+        @{Html.RenderAction("NewsCates", "Content");}
+        <div class="center-new">
+            <div class="post_detail">
+                <h1 class="tintuc-title">@Model.NewsDetail.Title</h1>
+                <div class="tintuc-content">
+                    <p><strong>@Model.NewsDetail.Description</strong></p>
+
+                    @Html.Raw(Model.NewsDetail.ContentHtml)
+                </div>
+            </div><!--end post_detail-->
+           
+            <div class="social-singletintuc">
+                <h4>Chia sẻ mạng xã hội: </h4>
+                <div class="social-list">
+                    <a id="sfb" target="_blank" href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=@Request.Url.AbsoluteUri&amp;p[images][0]=&amp;p[title]=@Model.NewsDetail.Title&amp;p[summary]=@Model.NewsDetail.Description" title="Chia sẻ lên Facebook"></a>
+                    <a id="stw" target="_blank" href="http://twitter.com/home?status=Chương trình khuyến mại “The Shopping day”%0ARead%20more:%20http://barishidiparis.com/tin-tuc/chuong-trinh-khuyen-mai-the-shopping-day/%0A" title="Chia sẻ lên Twitter"></a>
+                    <a id="sem" target="_blank" href="mailto:?subject=Chương trình khuyến mại “The Shopping day”&amp;body=Xem thêm tại: http://barishidiparis.com/tin-tuc/chuong-trinh-khuyen-mai-the-shopping-day/" title="Chia sẻ qua Email"></a>
+                    <a id="sgp" target="_blank" href="https://plus.google.com/share?url=http://barishidiparis.com/tin-tuc/chuong-trinh-khuyen-mai-the-shopping-day/" title="Chia sẻ lên Google+"></a>
+                </div>
+            </div>
+
+            <div class="related-tintuc">
+                <h4 class="tin">Tin tức khác</h4>
+                <ul class="tindadang">
+                    @foreach (var item in @Model.RelatedNewses)
+                    {
+                        <li><a href="/news-detail/@item.MetaTitle-@item.ID">@item.Title</a></li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <div id="new_right">
+            <div class="widget-sidebar" id="tintucnoibat">
+                <h3 class="tile-sidebar-cate">Tin tức nổi bật</h3>
+                <ul id="widget-sidebar-1">
+                    @foreach (var item in Model.HotNewses)
+                    {
+                        string link = "/news-detail/" +item.MetaTitle+"-" + item.ID;
+                        <li>
+                            <div class="thumb-sidebar">
+                                <a href="@link">
+                                    <img width="160" height="126" src="@item.Images" class="attachment-thumbnail wp-post-image" alt="@item.Images" />
+                                </a>
+                            </div>
+                            <div class="meta-sidebar">
+                                <h2><a href="@link">@item.Title</a></h2>
+                            </div>
+                        </li>
+                    }
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>

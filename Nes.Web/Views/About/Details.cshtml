@@ -1,0 +1,30 @@
+﻿@model Nes.Dal.EntityModels.About
+
+@{
+    ViewBag.Title = @Model.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="full category">
+    <div class="rwidth" id="bread">
+        Breadcrumb NavXT 5.0.1
+        <span class="home-icon"></span><a title="Go to home." href="/" class="home">Trang chủ</a><span class="bread-icon"></span>
+        <a title="Go to the tin tức." href="/About" class="taxonomy category">Giới thiệu</a>
+        <span class="bread-icon"></span><span class="curr_bread">@Model.Title</span>
+    </div>
+    <div id="content_product" class="product-cate rwidth">
+        @{Html.RenderAction("AboutCates", "About");}
+        <div class="center-new">
+            <div class="post_detail">
+                <h1 class="tintuc-title">@Model.Title</h1>
+                <div class="tintuc-content">
+                    <p><strong>@Model.Description</strong></p>
+
+                    @Html.Raw(Model.ContentHtml)
+                </div>
+            </div><!--end post_detail-->
+        </div>
+     
+    </div>
+
+</div>

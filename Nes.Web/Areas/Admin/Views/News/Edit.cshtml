@@ -1,0 +1,133 @@
+﻿@model Nes.Dal.EntityModels.News
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">@Nes.Resources.NesResource.AdminNewsEditTitlePage</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                @Nes.Resources.NesResource.AdminNoteForm
+            </div>
+            <div class="panel-body">
+                @if (TempData["Notification"] != null)
+                {
+                    @Html.Hidden("NotificationAutoHide", TempData["NotificationAutoHide"])
+                    <div id="NotificationBox" class="@TempData["NotificationCSS"]" style="display: none">
+                        @TempData["Notification"]
+                    </div>
+                }
+                <div class="row">
+                    <div class="col-lg-12">
+                        @using (Html.BeginForm("Edit", "News", FormMethod.Post, new { @role = "form" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary(true)
+                            @Html.HiddenFor(model => model.ID)
+                            @Html.HiddenFor(model => model.CreatedDate)
+                            @Html.HiddenFor(model => model.CreatedBy)
+                            @Html.HiddenFor(model => model.LanguageCode)
+                            <div class="form-group">
+                                <label>@Html.LabelFor(model => model.Title)</label>
+                                @Html.TextBoxFor(model => model.Title, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Title)
+                            </div>
+
+                            <div class="form-group">
+                                <label>
+                                    @Html.LabelFor(model => model.Description)
+                                </label>
+                                @Html.TextAreaFor(model => model.Description, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Description)
+                            </div>
+
+                            <div class="form-group">
+                                <label>
+                                    @Html.LabelFor(model => model.Images)
+                                </label>
+                                @Html.TextBoxFor(model => model.Images, new { @class = "form-control", @id = "txtImgUrl" })
+                                <input type="button" id="btnSelectImg" class="btn btn-info" value="@Nes.Resources.NesResource.AdminSelectImageButtonText" />
+                                @Html.ValidationMessageFor(model => model.Images)
+                            </div>
+
+                            <div class="form-group">
+                                <label>
+                                    @Html.LabelFor(model => model.CategoryID)
+                                </label>
+                                @Html.DropDownListFor(model => model.CategoryID, (SelectList)ViewBag.Categories, @Nes.Resources.NesResource.AdminEmptySelectionTextForFunction, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.CategoryID)
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    @Html.LabelFor(model => model.Status)
+                                </label>
+                                @Html.DropDownListFor(model => model.Status,
+                                     new List<SelectListItem>()
+                                        {
+                                        new SelectListItem { Text = @Nes.Resources.NesResource.AdminNewsPublishedStatusText, Value = "1",Selected=true },
+                                        new SelectListItem { Text = @Nes.Resources.NesResource.AdminNewsUnPublishedStatusText,  Value = "2" },
+                                        }, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Status)
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    @Html.LabelFor(model => model.PublishedDate)
+                                </label>
+                                @Html.TextBoxFor(model => model.PublishedDate, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.PublishedDate)
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    @Html.LabelFor(model => model.MetaKeywords)
+                                </label>
+                                @Html.TextAreaFor(model => model.MetaKeywords, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.MetaKeywords)
+                            </div>
+
+                            <div class="form-group">
+                                <label>
+                                    @Html.LabelFor(model => model.MetaDescription)
+                                </label>
+
+                                @Html.TextAreaFor(model => model.MetaDescription, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.MetaDescription)
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    @Html.LabelFor(model => model.Source)
+                                </label>
+                                @Html.TextBoxFor(model => model.Source, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Source)
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    @Html.LabelFor(model => model.ContentHtml)
+                                </label>
+                                @Html.TextAreaFor(m => m.ContentHtml, new { @class = "w100p", @id = "contenteditor", @style = "height:600px" })
+                                @Html.ValidationMessageFor(model => model.ContentHtml)
+                            </div>
+
+                            <button type="submit" class="btn btn-default">@Nes.Resources.NesResource.AdminSaveButtonText</button>
+
+                            @Html.ActionLink(@Nes.Resources.NesResource.GoBackToListText, "Index");
+                        }
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->

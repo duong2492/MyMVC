@@ -1,0 +1,20 @@
+D:\ESVN\Source\NES2\NES\Nes.Common\bin\Release\Nes.Common.dll
+D:\ESVN\Source\NES2\NES\Nes.Common\bin\Release\Nes.Common.pdb
+D:\ESVN\Source\NES2\NES\Nes.Common\bin\Release\log4net.dll
+D:\ESVN\Source\NES2\NES\Nes.Common\bin\Release\PagedList.dll
+D:\ESVN\Source\NES2\NES\Nes.Common\bin\Release\PagedList.Mvc.dll
+D:\ESVN\Source\NES2\NES\Nes.Common\bin\Release\PagedList.xml
+D:\ESVN\Source\NES2\NES\Nes.Common\bin\Release\PagedList.Mvc.xml
+D:\ESVN\Source\NES2\NES\Nes.Common\obj\Release\Nes.Common.dll
+D:\ESVN\Source\NES2\NES\Nes.Common\obj\Release\Nes.Common.pdb
+D:\ESVN\Source\NES2\NES\Nes.Common\obj\Release\Nes.Common.csprojResolveAssemblyReference.cache
+E:\ESVN\Source Code\NES2\NES\Nes.Common\bin\Release\Nes.Common.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Common\bin\Release\Nes.Common.pdb
+E:\ESVN\Source Code\NES2\NES\Nes.Common\bin\Release\log4net.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Common\bin\Release\PagedList.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Common\bin\Release\PagedList.Mvc.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Common\bin\Release\PagedList.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Common\bin\Release\PagedList.Mvc.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Common\obj\Release\Nes.Common.csprojResolveAssemblyReference.cache
+E:\ESVN\Source Code\NES2\NES\Nes.Common\obj\Release\Nes.Common.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Common\obj\Release\Nes.Common.pdb

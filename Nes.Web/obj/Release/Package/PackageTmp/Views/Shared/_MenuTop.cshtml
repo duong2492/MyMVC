@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Nes.Dal.EntityModels.Menu>
+<div class="full" id="menu">
+    <div class="full line"></div>
+    <div class="rwidth">
+        <ul id="menu-page-menu" class="group">
+            @foreach (var item in @Model)
+            {
+                string currentItem = Request.Url.AbsoluteUri.Contains(item.Link) ? "current-menu-item" : string.Empty;
+                <li class="menu-item @currentItem"><a target="@item.Target" href="@item.Link">@item.Text</a></li>
+            }
+
+        </ul>
+    </div>
+    <div class="full line"></div>
+</div><!--end menu-->

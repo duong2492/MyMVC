@@ -1,0 +1,60 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="robots" content="noindex,follow" />
+    <link rel="stylesheet" href="/Content/themes/client/css/zoom.css" />
+    <link href="/Content/themes/client/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+    <link href="~/Content/themes/client/css/flexslider.css" rel="stylesheet" />
+    <script src="/Scripts/client/tab-nav.js"></script>
+    <script src="/Scripts/client/menu.js"></script>
+    <script src="/Scripts/client/zoom.js"></script>
+    <script src="/Scripts/client/jquery.flexslider.js"></script>
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        @ViewBag.Title
+    </title>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div class="full" id="header">
+            <div class="header-wrap">
+                <div id="top-header">
+                    <div id="lang">
+                        @Html.ActionLink("EN", "ChangeCulture", "Base",
+                                 new { language = "en", returnUrl = this.Request.RawUrl }, null)
+                        @Html.ActionLink("VN", "ChangeCulture", "Base",
+                                 new { language = "vi", returnUrl = this.Request.RawUrl }, null)
+                    </div>
+                    <div id="account">
+                        <a style="padding-left:28px;" href="/" title=""><span class="home-icon"></span>Trang chủ</a>
+                        @*<a class="login-icon" href="#" title=""><span class="login-icon"></span>Đăng nhập</a>
+                            <a class="reg-icon" href="#" title=""><span class="reg-icon"></span>Đăng ký</a>*@
+                    </div>
+                </div>
+                <div id="content-header">
+                    @using (Html.BeginForm("Search", "Product", FormMethod.Get, new { @id = "search" }))
+                    {
+                        <input id="s" name="s" class="hop" placeholder="Tìm kiếm ..." type="text" />
+                        <input class="tim" value="Tìm kiếm" type="submit" />
+                    }
+                    <a class="logo" title="New Lux" href="/"><img src="/Content/themes/client/images/logo.png" /></a>
+                    @*<a class="giohang-header" href="#" title="Giỏ hàng"><span class="icon-giohang"></span>GIỎ HÀNG 0 sản phẩm</a>*@
+                </div>
+            </div><!--end header-wrap-->
+        </div><!--end header-->
+        @{Html.RenderAction("_MenuTop", "Menu");}
+       
+        @RenderBody()
+        @{Html.RenderAction("Footer", "Home");}
+        <div class="clear"></div>
+    </div><!--end wrapper-->
+    <div class="clear"></div>
+
+
+
+</body>
+</html>

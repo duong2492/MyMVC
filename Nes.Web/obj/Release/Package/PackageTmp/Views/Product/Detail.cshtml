@@ -1,0 +1,296 @@
+﻿@model Nes.Web.Models.ProductViewModel
+
+@{
+     ViewBag.Title = @Model.ProductDetail.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.tabs_container table').attr({ 'border': '1', 'cellpadding': '5', 'BORDERCOLOR': 'gray' });
+
+        $('.tabs_content:not(:first)').hide();
+        $('.tabs li a').click(function () {
+
+            $('.tabs li a').removeClass('active');
+            $(this).addClass('active');
+            $('.tabs_content').hide();
+
+            var acctiveTab = $(this).attr('href');
+
+            $(acctiveTab).show();
+            a
+            return false;
+        });
+        if (jQuery(window).width() > 768) {
+            jQuery(document).ready(function () {
+                jQuery('.zoom').swinxyzoom({ mode: 'window', controls: false, size: '100%', dock: { position: 'right' } }); // dock window slippy lens
+            });
+        };
+    })
+    // The slider being synced must be initialized first
+    $('#thumbsl').flexslider({
+        animation: "slide",
+        controlNav: true,
+        animationLoop: false,
+        slideshow: false,
+        itemWidth: 90,
+        itemMargin: 5,
+        asNavFor: '#anhto'
+    });
+   
+    $('#anhto').flexslider({
+        animation: "slide",
+        controlNav: true,
+        itemWidth: 380,
+        animationLoop: false,
+        slideshow: false,
+        sync: "#thumbsl"
+    });
+
+    $(function() {
+        $(".sildeShow1").jCarouselLite({
+            vertical:false,
+            visible:5,
+            auto:5000,
+            speed:300,
+            btnNext: ".next1",
+            btnPrev: ".prev1"
+        });
+    });
+</script>
+<div class="full single">
+    <div class="rwidth" id="bread">
+        <!-- Breadcrumb NavXT 5.0.1 -->
+        <span class="home-icon"></span><a title="Go to home." href="/" class="home">Trang chủ</a><span class="bread-icon"></span>
+        <a title="Go to the Sản phẩm." href="/products" class="taxonomy category">Sản phẩm</a>
+        <span class="bread-icon"></span><a title="Go to the @Model.Category.Title." href="/product/@Model.Category.MetaTitle-@Model.Category.ID" class="taxonomy category">@Model.Category.Title</a><span class="bread-icon"></span><span class="curr_bread">@Model.ProductDetail.Title</span>
+    </div>
+    <div class="rwidth">
+        <div class="main-top">
+            <div class="left-detail">
+                <div class="album-product">
+                    <div id="anhto">
+                       <img src="@Model.ProductDetail.Images" alt="@Model.ProductDetail.Title" />
+                    </div>
+
+                    @*<div class="boxeSlide4" style="overflow:hidden;">
+                        <div id="thumbsl" class="sildeShow4">
+                            <input type="hidden" id="imganhto" value="http://barishidiparis.com/wp-content/uploads/2014/01/sptest.jpg" />
+                            <div class="flex-viewport" style="overflow: hidden; position: relative;">
+                                <ul class="slides" style="width: 1000%; -webkit-transition: 0s; transition: 0s; -webkit-transform: translate3d(0px, 0px, 0px);">
+                                    <li class="flex-active-slide" style="width: 90px; float: left; display: block;">
+                                        <a class="thumb-slideproduct" data-img="http://barishidiparis.com/wp-content/uploads/2014/01/sptest.jpg" href="#" title="">
+                                            <img title="sptest" src="http://barishidiparis.com/wp-content/uploads/2014/01/sptest.jpg" alt="" draggable="false" />
+                                        </a>
+                                    </li>
+
+                                    <li style="width: 90px; float: left; display: block;">
+                                        <a class="thumb-slideproduct" data-img="http://barishidiparis.com/wp-content/uploads/2014/01/sptest2.jpg" href="#" title="">
+                                            <img title="sptest2" src="http://barishidiparis.com/wp-content/uploads/2014/01/sptest2.jpg" alt="" draggable="false" />
+                                        </a>
+                                    </li>
+
+                                    <li style="width: 90px; float: left; display: block;">
+                                        <a class="thumb-slideproduct" data-img="http://barishidiparis.com/wp-content/uploads/2014/01/sptest3.jpg" href="#" title="">
+                                            <img title="sptest3" src="http://barishidiparis.com/wp-content/uploads/2014/01/sptest3.jpg" alt="" draggable="false" />
+                                        </a>
+                                    </li>
+
+                                    <li style="width: 90px; float: left; display: block;">
+                                        <a class="thumb-slideproduct" data-img="http://barishidiparis.com/wp-content/uploads/2014/01/5475346753_2_1_2.jpg" href="#" title="">
+                                            <img class="right0" title="5475346753_2_1_2" src="http://barishidiparis.com/wp-content/uploads/2014/01/5475346753_2_1_2.jpg" alt="" draggable="false" />
+                                        </a>
+                                    </li>
+
+                                    <li style="width: 90px; float: left; display: block;">
+                                        <a class="thumb-slideproduct" data-img="http://barishidiparis.com/wp-content/uploads/2014/01/5475346753_2_2_11.jpg" href="#" title="">
+                                            <img title="5475346753_2_2_1" src="http://barishidiparis.com/wp-content/uploads/2014/01/5475346753_2_2_11.jpg" alt="" draggable="false" />
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div><ol class="flex-control-nav flex-control-paging"><li><a class="flex-active">1</a></li><li><a>2</a></li></ol><ul class="flex-direction-nav"><li><a class="flex-prev flex-disabled" href="#" tabindex="-1">Previous</a></li><li><a class="flex-next" href="#">Next</a></li></ul>
+                        </div><!--End .sildeShow-->
+                    </div><!--End .boxeSlide-->*@
+                </div>
+                <div class="clear"></div>
+            </div><!--end left-->
+            <div class="right-detail">
+                <div class="product-detail">
+                    <h1>@Model.ProductDetail.Title</h1>
+                    <p class="info-pro">Mã sản phẩm: <strong>@Model.ProductDetail.Code</strong></p>
+                    <p class="info-pro">Loại: <strong>@Model.Category.Title</strong></p>
+                    <p class="price-pro">Giá: <span>@Model.ProductDetail.Price.ToString("N0") VNĐ</span></p>
+                    <div class="descript-pro">
+                        <p>@Model.ProductDetail.Description</p>
+                    </div>
+                    <!--end book-->
+                    <div class="social-share">
+                        <h4>Chia sẻ mạng xã hội</h4>
+                        <div class="social-list">
+                            <a id="sfb" target="_blank" href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=http://barishidiparis.com/san-pham-test/&amp;p[images][0]=http://barishidiparis.com/wp-content/uploads/2014/01/sptest.jpg&amp;p[title]=Sản phẩm test&amp;p[summary]=Sản phẩm test" title="Chia sẻ lên Facebook"></a>
+                            <a id="stw" target="_blank" href="http://twitter.com/home?status=Sản phẩm test%0ARead%20more:%20http://barishidiparis.com/san-pham-test/%0A" title="Chia sẻ lên Twitter"></a>
+                            <a id="sem" target="_blank" href="mailto:?subject=Sản phẩm test&amp;body=Xem thêm tại: http://barishidiparis.com/san-pham-test/" title="Chia sẻ qua Email"></a>
+                            <a id="sgp" target="_blank" href="https://plus.google.com/share?url=http://barishidiparis.com/san-pham-test/" title="Chia sẻ lên Google+"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-single">
+                    <div class="top-sidebar">
+                        <div class="widget-sidebar">
+                            <h3 class="title-sidebar">Sản phẩm mới</h3>
+                            <div class="clear"></div>
+                            <ul id="widget-sidebar-1">
+                                @foreach (var item in Model.NewProducts)
+                                {
+                                    string link = "/product-detail/" + @item.MetaTitle + "-" + @item.ID;
+                                    <li>
+                                        <div class="thumb-sidebar">
+                                            <a href="@link">
+                                                <img width="160" height="216" src="@item.Images" class="attachment-thumbnail wp-post-image" alt="@item.Title" />
+                                            </a>
+                                        </div>
+                                        <div class="meta-sidebar">
+                                            <h2><a href="@link">@item.Title</a></h2>
+                                            <div class="clear"></div>
+                                            <p class="price-sidebar">Giá: <span>@item.Price.ToString("N0") VNĐ</span></p>
+                                        </div>
+                                    </li>
+                                    <div class="clear"></div>
+                                }
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                        <style type="text/css" media="screen">
+                            #widget-sidebar-1 li {
+                                float: left;
+                                width: 100%;
+                                margin: 10px 0;
+                            }
+
+                            .thumb-sidebar {
+                                float: left;
+                                width: 62px;
+                                margin-right: 15px;
+                            }
+
+                                .thumb-sidebar img {
+                                    width: 62px;
+                                    height: auto;
+                                    float: left;
+                                }
+
+                                .thumb-sidebar > a {
+                                    display: block;
+                                    float: left;
+                                }
+
+                            .meta-sidebar {
+                                float: left;
+                                width: 137px;
+                            }
+
+                            .title-sidebar {
+                                font-size: 17px;
+                                color: #b9b9b9;
+                                width: 100%;
+                                float: left;
+                                text-align: center;
+                                font-family: 'Noticia Text', serif;
+                                text-transform: uppercase;
+                                margin-bottom: 10px;
+                            }
+
+                            .meta-sidebar a {
+                                color: #a8a8a8;
+                                font-size: 12px;
+                                font-family: Verdana;
+                                text-transform: uppercase;
+                                font-weight: normal;
+                            }
+
+                            .meta-sidebar h2 {
+                                font-weight: normal;
+                            }
+
+                            .meta-sidebar a:hover {
+                                color: #FFF;
+                                transition: 0.3s all ease-in-out;
+                            }
+
+                            .price-sidebar {
+                                float: left;
+                                width: 100%;
+                                color: #a8a8a8;
+                                font-family: Verdana;
+                                font-size: 11px;
+                                font-weight: bold;
+                                margin-top: 7px;
+                                text-transform: uppercase;
+                            }
+                        </style>
+                    </div>
+                    <div class="video-single">
+                        <p><iframe src="//www.youtube.com/embed/uL3vavzHlqw" height="350" width="425" frameborder="0"></iframe></p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div><!--end right-->
+            <div class="clear"></div>
+        </div><!--end main-top-->
+        <div class="clear"></div>
+        <div class="main-buttom">
+            <div class="main-buttom-left">
+                <ul class="tabs">
+                    <li class="1"><a href="#mota" class="active uppercase">Mô tả</a> </li>
+                </ul>
+                <div class="tabs_container">
+                    <div id="mota" class="tabs_content">
+                        
+                            @Html.Raw(Model.ProductDetail.Detail)
+                </div><!--end chitiet-->
+
+            </div><!--end tabs_contaner-->
+        </div><!--end main-buttom-left-->
+        <div class="main-buttom-right">
+            <h2 class="uppercase rlated_title">Sản phẩm cùng loại</h2>
+            <div class="boxeSlide" style="overflow:hidden;">
+                <div class="sildeShow3">
+                    <ul id="random">
+                        @foreach (var item in Model.RelatedProducts)
+                            {
+                                string link = "/product/detail/" + @item.ID;
+                            <li class="li-lienquan lienquan1">
+                                <a title="@item.Title" class="thumb-lienquan" href="@link">
+                                    <img class="wp-post-image" src="@item.Images" />
+                                </a>
+                                <div class="clear"></div>
+                                <h3 class="title-lienquan">
+                                    <a href="@link" title="@item.Title">@item.Title</a>
+                                </h3>
+                                <div class="clear"></div>
+                                <p class="price-lienquan">
+                                    GIÁ: @item.Price.ToString("N0") VNĐ
+                                </p>
+                                <div class="clear"></div>
+
+                                <a class="view-details" href="@link" title="@item.Title">Xem chi tiết</a>
+
+                                <div class="clear"></div>
+                            </li>
+                            <div class="clear"></div>
+                            }
+
+                    </ul>
+                    <div class="clear"></div>
+                </div><!--End .sildeShow-->
+                <div class="clear"></div>
+            </div><!--End .boxeSlide-->
+            <div class="clear"></div>
+        </div><!--end main-buttom-right-->
+    </div><!--end main-buttom-->
+</div>
+</div>
+
+
+

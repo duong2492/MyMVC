@@ -1,0 +1,197 @@
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\Nes.Web.dll.config
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\Nes.Web.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\Nes.Web.pdb
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\Antlr3.Runtime.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\DotNetOpenAuth.AspNet.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\DotNetOpenAuth.Core.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\DotNetOpenAuth.OAuth.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\DotNetOpenAuth.OpenId.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\EntityFramework.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\log4net.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\Microsoft.Data.Edm.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\Microsoft.Data.OData.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\Nes.Common.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\Nes.Dal.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\Nes.Resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\Newtonsoft.Json.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Net.Http.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Net.Http.Formatting.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Net.Http.WebRequest.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Spatial.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Web.Helpers.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Web.Http.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Web.Http.OData.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Web.Http.WebHost.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Web.Mvc.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Web.Optimization.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Web.Razor.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Web.WebPages.Deployment.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Web.WebPages.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Web.WebPages.Razor.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\WebGrease.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\WebMatrix.Data.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\WebMatrix.WebData.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\Nes.Common.pdb
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\Nes.Dal.pdb
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\Nes.Resources.pdb
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\EntityFramework.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\Newtonsoft.Json.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Net.Http.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Net.Http.Formatting.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Net.Http.WebRequest.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Web.Helpers.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Web.Http.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Web.Http.WebHost.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Web.Mvc.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Web.Razor.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Web.WebPages.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Web.WebPages.Deployment.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Web.WebPages.Razor.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\WebMatrix.Data.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\WebMatrix.WebData.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\DotNetOpenAuth.AspNet.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\DotNetOpenAuth.Core.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\DotNetOpenAuth.OAuth.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\DotNetOpenAuth.OpenId.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Web.Http.OData.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\Microsoft.Data.Edm.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\Microsoft.Data.OData.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\System.Spatial.xml
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\de\Microsoft.Data.Edm.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\es\Microsoft.Data.Edm.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\it\Microsoft.Data.Edm.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\de\Microsoft.Data.OData.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\es\Microsoft.Data.OData.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\fr\Microsoft.Data.OData.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\it\Microsoft.Data.OData.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\ja\Microsoft.Data.OData.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\ko\Microsoft.Data.OData.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\ru\Microsoft.Data.OData.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\de\System.Spatial.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\es\System.Spatial.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\fr\System.Spatial.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\it\System.Spatial.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\ja\System.Spatial.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\ko\System.Spatial.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\ru\System.Spatial.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\zh-Hans\System.Spatial.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\zh-Hant\System.Spatial.resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\obj\Release\Nes.Web.csprojResolveAssemblyReference.cache
+D:\ESVN\Source\NES2\NES\Nes.Web\obj\Release\Nes.Web.dll
+D:\ESVN\Source\NES2\NES\Nes.Web\obj\Release\Nes.Web.pdb
+D:\ESVN\Source\NES2\NES\Nes.Web\bin\CKFinder.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\Nes.Web.dll.config
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\Nes.Web.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\Nes.Web.pdb
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\Antlr3.Runtime.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\CKFinder.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\DotNetOpenAuth.AspNet.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\DotNetOpenAuth.Core.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\DotNetOpenAuth.OAuth.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\DotNetOpenAuth.OpenId.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\EntityFramework.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\log4net.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\Microsoft.Data.Edm.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\Microsoft.Data.OData.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\Microsoft.Web.Infrastructure.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\Microsoft.Web.WebPages.OAuth.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\Nes.Common.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\Nes.Dal.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\Nes.Resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\Newtonsoft.Json.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Net.Http.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Net.Http.Formatting.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Net.Http.WebRequest.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Spatial.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Web.Helpers.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Web.Http.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Web.Http.OData.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Web.Http.WebHost.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Web.Mvc.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Web.Optimization.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Web.Razor.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Web.WebPages.Deployment.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Web.WebPages.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Web.WebPages.Razor.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\WebGrease.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\WebMatrix.Data.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\WebMatrix.WebData.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\Nes.Common.pdb
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\Nes.Dal.pdb
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\Nes.Resources.pdb
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\EntityFramework.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\Newtonsoft.Json.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Net.Http.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Net.Http.Formatting.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Net.Http.WebRequest.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Web.Helpers.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Web.Http.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Web.Http.WebHost.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Web.Mvc.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Web.Razor.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Web.WebPages.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Web.WebPages.Deployment.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Web.WebPages.Razor.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\WebMatrix.Data.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\Microsoft.Web.WebPages.OAuth.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\WebMatrix.WebData.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\DotNetOpenAuth.AspNet.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\DotNetOpenAuth.Core.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\DotNetOpenAuth.OAuth.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\DotNetOpenAuth.OpenId.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Web.Http.OData.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\Microsoft.Data.Edm.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\Microsoft.Data.OData.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\System.Spatial.xml
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\de\Microsoft.Data.Edm.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\es\Microsoft.Data.Edm.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\fr\Microsoft.Data.Edm.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\it\Microsoft.Data.Edm.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\ja\Microsoft.Data.Edm.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\ko\Microsoft.Data.Edm.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\ru\Microsoft.Data.Edm.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\de\Microsoft.Data.OData.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\es\Microsoft.Data.OData.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\fr\Microsoft.Data.OData.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\it\Microsoft.Data.OData.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\ja\Microsoft.Data.OData.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\ko\Microsoft.Data.OData.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\ru\Microsoft.Data.OData.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\de\System.Spatial.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\es\System.Spatial.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\fr\System.Spatial.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\it\System.Spatial.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\ja\System.Spatial.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\ko\System.Spatial.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\ru\System.Spatial.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\zh-Hans\System.Spatial.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\zh-Hant\System.Spatial.resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\obj\Release\Nes.Web.csprojResolveAssemblyReference.cache
+E:\ESVN\Source Code\NES2\NES\Nes.Web\obj\Release\Nes.Web.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Web\obj\Release\Nes.Web.pdb
+E:\ESVN\Source Code\NES2\NES\Nes.Web\bin\Microsoft.Web.Infrastructure.xml

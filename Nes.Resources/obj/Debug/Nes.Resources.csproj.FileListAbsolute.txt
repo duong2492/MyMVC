@@ -1,0 +1,24 @@
+D:\ESVN\Source\NES2\NES\Nes.Resources\bin\Debug\Nes.Resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Resources\bin\Debug\Nes.Resources.pdb
+D:\ESVN\Source\NES2\NES\Nes.Resources\obj\Debug\Nes.Resources.dll
+D:\ESVN\Source\NES2\NES\Nes.Resources\obj\Debug\Nes.Resources.pdb
+D:\ESVN\Source\NES2\NES\Nes.Resources\obj\Debug\Nes.Resources.NesResource.resources
+D:\ESVN\Source\NES2\NES\Nes.Resources\obj\Debug\Nes.Resources.csproj.GenerateResource.Cache
+D:\ESVN\Source\NES2\NES\Nes.Resources\obj\Debug\Nes.Resources.ClientResources.resources
+D:\ESVN\Source\NES2\NES\Nes.Resources\obj\Debug\Nes.Resources.csprojResolveAssemblyReference.cache
+E:\ESVN\Source Code\NES2\NES\Nes.Resources\bin\Debug\Nes.Resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Resources\bin\Debug\Nes.Resources.pdb
+E:\ESVN\Source Code\NES2\NES\Nes.Resources\obj\Debug\Nes.Resources.ClientResources.resources
+E:\ESVN\Source Code\NES2\NES\Nes.Resources\obj\Debug\Nes.Resources.NesResource.resources
+E:\ESVN\Source Code\NES2\NES\Nes.Resources\obj\Debug\Nes.Resources.csproj.GenerateResource.Cache
+E:\ESVN\Source Code\NES2\NES\Nes.Resources\obj\Debug\Nes.Resources.dll
+E:\ESVN\Source Code\NES2\NES\Nes.Resources\obj\Debug\Nes.Resources.pdb
+E:\ESVN\Source Code\NES2\NES\Nes.Resources\obj\Debug\Nes.Resources.csprojResolveAssemblyReference.cache
+D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Resources\bin\Debug\Nes.Resources.dll
+D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Resources\bin\Debug\Nes.Resources.pdb
+D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Resources\obj\Debug\Nes.Resources.ClientResources.resources
+D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Resources\obj\Debug\Nes.Resources.NesResource.resources
+D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Resources\obj\Debug\Nes.Resources.csproj.GenerateResource.cache
+D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Resources\obj\Debug\Nes.Resources.csproj.CoreCompileInputs.cache
+D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Resources\obj\Debug\Nes.Resources.dll
+D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Resources\obj\Debug\Nes.Resources.pdb
