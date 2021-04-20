@@ -28,3 +28,15 @@ D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Common\obj\Debug\Nes.Co
 D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Common\obj\Debug\Nes.Common.csproj.CopyComplete
 D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Common\obj\Debug\Nes.Common.dll
 D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Common\obj\Debug\Nes.Common.pdb
+D:\Freelancer Code\MVC_BASE\Nes.Common\bin\Debug\Nes.Common.dll
+D:\Freelancer Code\MVC_BASE\Nes.Common\bin\Debug\Nes.Common.pdb
+D:\Freelancer Code\MVC_BASE\Nes.Common\bin\Debug\log4net.dll
+D:\Freelancer Code\MVC_BASE\Nes.Common\bin\Debug\PagedList.dll
+D:\Freelancer Code\MVC_BASE\Nes.Common\bin\Debug\PagedList.Mvc.dll
+D:\Freelancer Code\MVC_BASE\Nes.Common\bin\Debug\PagedList.xml
+D:\Freelancer Code\MVC_BASE\Nes.Common\bin\Debug\PagedList.Mvc.xml
+D:\Freelancer Code\MVC_BASE\Nes.Common\obj\Debug\Nes.Common.csprojAssemblyReference.cache
+D:\Freelancer Code\MVC_BASE\Nes.Common\obj\Debug\Nes.Common.csproj.CoreCompileInputs.cache
+D:\Freelancer Code\MVC_BASE\Nes.Common\obj\Debug\Nes.Common.csproj.CopyComplete
+D:\Freelancer Code\MVC_BASE\Nes.Common\obj\Debug\Nes.Common.dll
+D:\Freelancer Code\MVC_BASE\Nes.Common\obj\Debug\Nes.Common.pdb

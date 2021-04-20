@@ -22,3 +22,12 @@ D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Resources\obj\Debug\Nes
 D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Resources\obj\Debug\Nes.Resources.csproj.CoreCompileInputs.cache
 D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Resources\obj\Debug\Nes.Resources.dll
 D:\Freelancer Code\MVC\bachngoctoan.com_cms\NES2\NES\Nes.Resources\obj\Debug\Nes.Resources.pdb
+D:\Freelancer Code\MVC_BASE\Nes.Resources\bin\Debug\Nes.Resources.dll
+D:\Freelancer Code\MVC_BASE\Nes.Resources\bin\Debug\Nes.Resources.pdb
+D:\Freelancer Code\MVC_BASE\Nes.Resources\obj\Debug\Nes.Resources.csprojAssemblyReference.cache
+D:\Freelancer Code\MVC_BASE\Nes.Resources\obj\Debug\Nes.Resources.ClientResources.resources
+D:\Freelancer Code\MVC_BASE\Nes.Resources\obj\Debug\Nes.Resources.NesResource.resources
+D:\Freelancer Code\MVC_BASE\Nes.Resources\obj\Debug\Nes.Resources.csproj.GenerateResource.cache
+D:\Freelancer Code\MVC_BASE\Nes.Resources\obj\Debug\Nes.Resources.csproj.CoreCompileInputs.cache
+D:\Freelancer Code\MVC_BASE\Nes.Resources\obj\Debug\Nes.Resources.dll
+D:\Freelancer Code\MVC_BASE\Nes.Resources\obj\Debug\Nes.Resources.pdb
