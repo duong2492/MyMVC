@@ -835,6 +835,15 @@ namespace Nes.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Danh sách sản phẩm.
+        /// </summary>
+        public static string AdminProductListTitlePage {
+            get {
+                return ResourceManager.GetString("AdminProductListTitlePage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Thêm mới quyền.
         /// </summary>
         public static string AdminRoleCreateTitlePage {

@@ -58,13 +58,14 @@ namespace Nes.Web.Areas.Admin.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", Nes.Resources.NesResource.ErrorCreateRecordMessage);
+                    //ModelState.AddModelError("", Nes.Resources.NesResource.ErrorCreateRecordMessage);
                 }
             }
             catch (Exception ex)
             {
                 logger.Error(ex);
                 HandleException(ex);
+                ModelState.AddModelError("", "Hệ thống có lỗi, vui lòng liên hệ admin");
 
             }
             BindingProductCateDropDown();
@@ -106,7 +107,7 @@ namespace Nes.Web.Areas.Admin.Controllers
                 {
                     using (var unitOfWork = new UnitOfWork(new DbContextFactory<NesDbContext>()))
                     {
-                        product.UpdatedDate = DateTime.Now;
+                        product.UpdatedDate = DateTime.Now;  
                         product.UpdatedBy = User.Identity.Name;
                         product.MetaTitle = StringExtensions.ToUnsignString(product.MetaTitle);
                         unitOfWork.GetRepository<Product>().Update(product);
@@ -117,13 +118,14 @@ namespace Nes.Web.Areas.Admin.Controllers
                 }
                 else
                 {
-                    this.SetNotification(Nes.Resources.NesResource.AdminEditRecordFailed, NotificationEnumeration.Error, true);
-                    ModelState.AddModelError("", Nes.Resources.NesResource.ErrorCreateRecordMessage);
+                   // this.SetNotification(Nes.Resources.NesResource.AdminEditRecordFailed, NotificationEnumeration.Error, true);
+                   // ModelState.AddModelError("", Nes.Resources.NesResource.ErrorCreateRecordMessage);
                 }
 
             }
             catch (Exception ex)
             {
+                ModelState.AddModelError("", "Hệ thống có lỗi, vui lòng liên hệ admin   ");  
                 logger.Error(ex);
                 HandleException(ex);
             }

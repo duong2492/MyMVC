@@ -46,7 +46,7 @@ namespace Nes.Web.Controllers
         }
         protected override IAsyncResult BeginExecuteCore(AsyncCallback callback, object state)
         {
-            Session[SystemConsts.CULTURE] = new CultureInfo(CultureName);
+            Session[SystemConsts.CULTURE] = new CultureInfo(CultureName);  
             //// Attempt to read the culture cookie from Request
             //var cultureSession = "vi";
             //if (cultureSession != null)
@@ -77,7 +77,7 @@ namespace Nes.Web.Controllers
             //{
             //    ViewBag.SystemNameText = Cache.Get(CACHE_SYSTEM_CONFIG);
             //}
-            ////binding language dropdownlist
+            ////binding language dropdownlist 
             //var unit = new UnitOfWork(new DbContextFactory<NesDbContext>());
             //var languageList = unit.GetRepository<Language>().All().ToList();
             //var sessionLang = Session[SystemConsts.CULTURE];

@@ -375,6 +375,9 @@
   <data name="AdminProductCategoryListTitlePage" xml:space="preserve">
     <value>Danh mục sản phẩm</value>
   </data>
+  <data name="AdminProductListTitlePage" xml:space="preserve">
+    <value>Danh sách sản phẩm</value>
+  </data>
   <data name="AdminRoleCreateTitlePage" xml:space="preserve">
     <value>Thêm mới quyền</value>
   </data>

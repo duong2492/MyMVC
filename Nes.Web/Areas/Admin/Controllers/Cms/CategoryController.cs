@@ -55,13 +55,14 @@ namespace Nes.Web.Areas.Admin.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", Nes.Resources.NesResource.ErrorCreateRecordMessage);
+                  //  ModelState.AddModelError("", Nes.Resources.NesResource.ErrorCreateRecordMessage);
                 }
             }
             catch (Exception ex)
             {
                 logger.Error(ex);
                 HandleException(ex);
+                ModelState.AddModelError("", "Hệ thống có lỗi, vui lòng liên hệ admin");
             }
             PopulateParentIDDropDownList();
             return View(category);

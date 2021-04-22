@@ -24,10 +24,10 @@
             <div class="header-wrap">
                 <div id="top-header">
                     <div id="lang">
+                        @Html.ActionLink("VN", "ChangeCulture", "Base",
+                               new { language = "vi", returnUrl = this.Request.RawUrl }, null)
                         @Html.ActionLink("EN", "ChangeCulture", "Base",
                                  new { language = "en", returnUrl = this.Request.RawUrl }, null)
-                        @Html.ActionLink("VN", "ChangeCulture", "Base",
-                                 new { language = "vi", returnUrl = this.Request.RawUrl }, null)
                     </div>
                     <div id="account">
                         <a style="padding-left:28px;" href="/" title=""><span class="home-icon"></span>Trang chủ</a>

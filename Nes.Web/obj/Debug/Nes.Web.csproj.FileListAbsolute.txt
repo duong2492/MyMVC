@@ -407,3 +407,4 @@ D:\Freelancer Code\MVC_BASE\Nes.Web\obj\Debug\Nes.Web.csproj.CoreCompileInputs.c
 D:\Freelancer Code\MVC_BASE\Nes.Web\obj\Debug\Nes.Web.csproj.CopyComplete
 D:\Freelancer Code\MVC_BASE\Nes.Web\obj\Debug\Nes.Web.dll
 D:\Freelancer Code\MVC_BASE\Nes.Web\obj\Debug\Nes.Web.pdb
+D:\Freelancer Code\MVC_BASE\Nes.Web\bin\Microsoft.Web.Infrastructure.dll

@@ -76,9 +76,9 @@ namespace Nes.Web.Areas.Admin.Controllers
                 }
                 else
                 {
-                    var errors = ModelState.Select(x => x.Value.Errors)
-                         .Where(y => y.Count > 0)
-                         .ToList();
+                    //var errors = ModelState.Select(x => x.Value.Errors)
+                    //     .Where(y => y.Count > 0)
+                    //     .ToList();
                     //ModelState.AddModelError("", Nes.Resources.NesResource.ErrorValidForm);
                 }
             }

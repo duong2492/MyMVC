@@ -31,24 +31,27 @@
                         @using (Html.BeginForm("Edit", "ProductCategory", FormMethod.Post, new { @role = "form" }))
                         {
                             @Html.AntiForgeryToken()
-                            @Html.ValidationSummary(true)
-                            @Html.HiddenFor(model=>model.ID)
-                            @Html.HiddenFor(model=>model.CreatedBy)
-                            @Html.HiddenFor(mode=>Model.CreatedDate)
-                            @Html.HiddenFor(mode=>Model.MetaTitle)
-                            @Html.HiddenFor(mode=>Model.LanguageCode)
+                            if (ViewContext.ViewData.ModelState.Count > 0)
+                            {
+                                @Html.ValidationSummary(false, "", new { @class = "alert alert-danger" })
+                            }
+                            @Html.HiddenFor(model => model.ID)
+                            @Html.HiddenFor(model => model.CreatedBy)
+                            @Html.HiddenFor(mode => Model.CreatedDate)
+                            @Html.HiddenFor(mode => Model.MetaTitle)
+                            @Html.HiddenFor(mode => Model.LanguageCode)
                             <div class="form-group">
                                 <label>@Html.LabelFor(model => model.Title)</label>
                                 @Html.TextBoxFor(model => model.Title, new { @class = "form-control" })
-                                @Html.ValidationMessageFor(model => model.Title)
+                                @*@Html.ValidationMessageFor(model => model.Title)*@
                             </div>
 
-                             <div class="form-group">
+                            <div class="form-group">
                                 <label>
                                     @Html.LabelFor(model => model.Images)
                                 </label>
                                 @Html.TextBoxFor(model => model.Images, new { @class = "form-control", @id = "txtImgUrl" })
-                                 <input type="button" id="btnSelectImg" class="btn btn-info" value="@Nes.Resources.NesResource.AdminSelectImageButtonText" />
+                                <input type="button" id="btnSelectImg" class="btn btn-info" value="@Nes.Resources.NesResource.AdminSelectImageButtonText" />
                                 @Html.ValidationMessageFor(model => model.Images)
                             </div>
 
@@ -65,7 +68,7 @@
                                     @Html.LabelFor(model => model.Order)
                                 </label>
                                 @Html.TextBoxFor(model => model.Order, new { @class = "form-control" })
-                                @Html.ValidationMessageFor(model => model.Order)
+                                @*@Html.ValidationMessageFor(model => model.Order)*@
                             </div>
 
                             <div class="form-group">
@@ -98,7 +101,7 @@
                                 @Html.CheckBoxFor(model => model.Status, new { @class = "checkbox", @checked = "checked" })
                                 @Html.ValidationMessageFor(model => model.Status)
                             </div>
-                            <button type="submit" class="btn btn-default">@Nes.Resources.NesResource.AdminSaveButtonText</button>
+                            <button type="submit" class="btn btn-success">@Nes.Resources.NesResource.AdminSaveButtonText</button>
 
                             @Html.ActionLink(@Nes.Resources.NesResource.GoBackToListText, "Index", new { @class = "btn btn-info" });
                         }

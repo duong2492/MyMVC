@@ -42,7 +42,7 @@ namespace Nes.Dal.EntityModels
             set { Images = value.ToString(); }
         }
 
-
+        [Required(ErrorMessage ="Yêu cầu nhập giá")]
         [Display(Name = "ProductPrice", ResourceType = typeof(Resources.NesResource))]
         public decimal Price { get; set; }
 
@@ -62,6 +62,7 @@ namespace Nes.Dal.EntityModels
         public Nullable<System.DateTime> UpdatedDate { get; set; }
         public string UpdatedBy { get; set; }
 
+        [Required(ErrorMessage = "Yêu cầu nhập danh mục sản phẩm")]
         [Display(Name = "ProductCategoryID", ResourceType = typeof(Resources.NesResource))]
         public long CategoryID { get; set; }
 
