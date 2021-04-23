@@ -12,9 +12,10 @@ namespace Nes.Dal.EntityModels
     public class About
     {
         [Key]
+
         [Display(Name = "AboutID", ResourceType = typeof(Resources.NesResource))]
         public long ID { get; set; }
-
+        [Required(ErrorMessageResourceType = typeof(NesResource), ErrorMessageResourceName = "NewsTitleRequired")]
         [Display(Name = "AboutTitle", ResourceType = typeof(Resources.NesResource))]
         public string Title { get; set; }
 

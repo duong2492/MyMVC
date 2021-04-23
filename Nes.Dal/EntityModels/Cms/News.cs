@@ -56,6 +56,7 @@ namespace Nes.Dal.EntityModels
         [Display(Name = "NewsRelatedNewses", ResourceType = typeof(Resources.NesResource))]
         public string RelatedNewses { get; set; }
 
+        [Required(ErrorMessage ="Yêu cầu chọn danh mục")]
         [Display(Name = "NewsCategoryID", ResourceType = typeof(Resources.NesResource))]
         public long CategoryID { get; set; }
 

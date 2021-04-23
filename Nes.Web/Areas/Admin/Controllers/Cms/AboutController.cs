@@ -43,7 +43,11 @@ namespace Nes.Web.Areas.Admin.Controllers
             {
                 news.CreatedDate = DateTime.Now;
                 news.CreatedBy = User.Identity.Name;
-                news.MetaTitle = StringExtensions.ToUnsignString(news.Title);
+                if (!string.IsNullOrEmpty(news.Title))
+                {
+                    news.MetaTitle = StringExtensions.ToUnsignString(news.Title);
+                }
+                
                 news.LanguageCode = CultureName;
                 if (ModelState.IsValid)
                 {
@@ -57,14 +61,14 @@ namespace Nes.Web.Areas.Admin.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", Nes.Resources.NesResource.ErrorCreateRecordMessage);
+                   // ModelState.AddModelError("", Nes.Resources.NesResource.ErrorCreateRecordMessage);
                 }
             }
             catch (Exception ex)
             {
                 logger.Error(ex);
                 HandleException(ex);
-
+                ModelState.AddModelError("", "Hệ thống có lỗi, vui lòng liên hệ admin");
             }
             return View(news);
         }
@@ -114,7 +118,7 @@ namespace Nes.Web.Areas.Admin.Controllers
                 else
                 {
                     this.SetNotification(Nes.Resources.NesResource.AdminEditRecordFailed, NotificationEnumeration.Error, true);
-                    ModelState.AddModelError("", Nes.Resources.NesResource.ErrorCreateRecordMessage);
+                    //ModelState.AddModelError("", Nes.Resources.NesResource.ErrorCreateRecordMessage);
                 }
 
             }
@@ -122,6 +126,7 @@ namespace Nes.Web.Areas.Admin.Controllers
             {
                 logger.Error(ex);
                 HandleException(ex);
+                ModelState.AddModelError("", "Hệ thống có lỗi, vui lòng liên hệ admin");
 
             }
             return View(news);

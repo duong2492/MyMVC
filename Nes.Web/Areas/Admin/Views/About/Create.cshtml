@@ -30,7 +30,10 @@
                         @using (Html.BeginForm("Create", "About", FormMethod.Post, new { @role = "form" }))
                         {
                             @Html.AntiForgeryToken()
-                            @Html.ValidationSummary(true)
+                            if (ViewContext.ViewData.ModelState.Count > 0)
+                            {
+                                @Html.ValidationSummary(false, "", new { @class = "alert alert-danger" })
+                            }
 
                             <div class="form-group">
                                 <label>@Html.LabelFor(model => model.Title)</label>
@@ -55,7 +58,7 @@
                                 @Html.ValidationMessageFor(model => model.Images)
                             </div>
 
-                          
+
                             <div class="form-group">
                                 <label>
                                     @Html.LabelFor(model => model.Status)
@@ -68,7 +71,7 @@
                                         }, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(model => model.Status)
                             </div>
-                          
+
                             <div class="form-group">
                                 <label>
                                     @Html.LabelFor(model => model.MetaKeywords)
@@ -85,7 +88,7 @@
                                 @Html.TextAreaFor(model => model.MetaDescription, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(model => model.MetaDescription)
                             </div>
-                           
+
                             <div class="form-group">
                                 <label>
                                     @Html.LabelFor(model => model.ContentHtml)
@@ -93,8 +96,8 @@
                                 @Html.TextAreaFor(m => m.ContentHtml, new { @class = "w100p", @id = "contenteditor", @style = "height:600px" })
                                 @Html.ValidationMessageFor(model => model.ContentHtml)
                             </div>
-                          
-                            <button type="submit" class="btn btn-default">@Nes.Resources.NesResource.AdminSaveButtonText</button>
+
+                            <button type="submit" class="btn btn-success">@Nes.Resources.NesResource.AdminSaveButtonText</button>
 
                             @Html.ActionLink(@Nes.Resources.NesResource.GoBackToListText, "Index");
                         }

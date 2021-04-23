@@ -90,14 +90,14 @@ namespace Nes.Web.Areas.Admin.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", Nes.Resources.NesResource.ErrorCreateRecordMessage);
+                  //  ModelState.AddModelError("", Nes.Resources.NesResource.ErrorCreateRecordMessage);
                 }
             }
             catch (Exception ex)
             {
                 logger.Error(ex);
                 HandleException(ex);
-
+                ModelState.AddModelError("", "Hệ thống có lỗi, vui lòng liên hệ admin");
             }
             PopulateGroupIDDropDownList();
             return View(news);
@@ -161,7 +161,7 @@ namespace Nes.Web.Areas.Admin.Controllers
                 else
                 {
                     this.SetNotification(Nes.Resources.NesResource.AdminEditRecordFailed, NotificationEnumeration.Error, true);
-                    ModelState.AddModelError("", Nes.Resources.NesResource.ErrorCreateRecordMessage);
+                    //ModelState.AddModelError("", Nes.Resources.NesResource.ErrorCreateRecordMessage);
                 }
 
             }
@@ -169,7 +169,7 @@ namespace Nes.Web.Areas.Admin.Controllers
             {
                 logger.Error(ex);
                 HandleException(ex);
-
+                ModelState.AddModelError("", "Hệ thống có lỗi, vui lòng liên hệ admin");
             }
             PopulateGroupIDDropDownList(news.CategoryID);
             return View(news);
@@ -223,7 +223,7 @@ namespace Nes.Web.Areas.Admin.Controllers
             List<CategoryViewModel> items = new List<CategoryViewModel>();
 
             //get all of them from DB
-            IEnumerable<Category> allCategorys = unitOfWork.GetRepository<Category>().All().ToList();
+            IEnumerable<Category> allCategorys = unitOfWork.GetRepository<Category>().Filter(x=>x.LanguageCode.Equals(CultureName)).ToList();
             //get parent categories
             IEnumerable<Category> parentCategorys = allCategorys.Where(c => c.ParentID == null).OrderBy(c => c.Order);
 

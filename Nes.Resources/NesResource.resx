@@ -834,6 +834,9 @@
   <data name="NotPermissionMessage" xml:space="preserve">
     <value>Bạn không có sự cho phép cần thiết để thực hiện hành động này</value>
   </data>
+  <data name="OrderRequired" xml:space="preserve">
+    <value>Yêu cầu nhập thứ tự sắp xếp</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Mật khẩu</value>
   </data>

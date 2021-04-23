@@ -2212,6 +2212,15 @@ namespace Nes.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Yêu cầu nhập thứ tự sắp xếp.
+        /// </summary>
+        public static string OrderRequired {
+            get {
+                return ResourceManager.GetString("OrderRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mật khẩu.
         /// </summary>
         public static string Password {

@@ -18,6 +18,13 @@
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
+                @if (TempData["Notification"] != null)
+                {
+                    @Html.Hidden("NotificationAutoHide", TempData["NotificationAutoHide"])
+                    <div id="NotificationBox" class="@TempData["NotificationCSS"]" style="display: none">
+                        @TempData["Notification"]
+                    </div>
+                }
                 <span id="actionMessage"></span>
                 <div class="table-responsive">
                     <table class="table table-striped table-bordered table-hover" id="dataTables">

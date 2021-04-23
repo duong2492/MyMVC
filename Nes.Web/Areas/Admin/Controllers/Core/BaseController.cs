@@ -47,15 +47,15 @@ namespace Nes.Web.Areas.Admin.Controllers
         }
         protected override IAsyncResult BeginExecuteCore(AsyncCallback callback, object state)
         {
-
+            var a = Request.UserLanguages;
 
             // Attempt to read the culture cookie from Request
             var cultureSession = Session[SystemConsts.CULTURE];
             if (cultureSession != null)
                 CultureName = cultureSession.ToString();
             else
-                CultureName = Request.UserLanguages != null && Request.UserLanguages.Length > 0 ?
-                        Request.UserLanguages[0] :  // obtain it from HTTP header AcceptLanguages
+                CultureName = Request.UserLanguages != null && Request.UserLanguages.Length > 0 ? 
+                        Request.UserLanguages[1] :  // obtain it from HTTP header AcceptLanguages
                         null;
             // Validate culture name
             CultureName = CultureHelper.GetImplementedCulture(CultureName); // This is safe

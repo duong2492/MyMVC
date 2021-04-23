@@ -31,6 +31,7 @@ namespace Nes.Dal.EntityModels
 
 
         [Display(Name = "CategoryOrder", ResourceType = typeof(Resources.NesResource))]
+        [Required(ErrorMessageResourceType = typeof(NesResource), ErrorMessageResourceName = "OrderRequired")]
         public int Order { get; set; }
 
         [Display(Name = "CategoryParentID", ResourceType = typeof(Resources.NesResource))]

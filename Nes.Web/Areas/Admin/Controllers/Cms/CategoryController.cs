@@ -107,7 +107,7 @@ namespace Nes.Web.Areas.Admin.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", Nes.Resources.NesResource.ErrorCreateRecordMessage);
+                    //ModelState.AddModelError("", Nes.Resources.NesResource.ErrorCreateRecordMessage);
                 }
 
             }
@@ -115,7 +115,7 @@ namespace Nes.Web.Areas.Admin.Controllers
             {
                 logger.Error(ex);
                 HandleException(ex);
-
+                ModelState.AddModelError("", "Hệ thống có lỗi, vui lòng liên hệ admin");
             }
             PopulateParentIDDropDownList(category.ParentID);
             return View(category);
