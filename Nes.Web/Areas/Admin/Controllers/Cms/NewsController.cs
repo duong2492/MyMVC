@@ -49,7 +49,11 @@ namespace Nes.Web.Areas.Admin.Controllers
             {
                 news.CreatedDate = DateTime.Now;
                 news.CreatedBy = User.Identity.Name;
-                news.MetaTitle = StringExtensions.ToUnsignString(news.Title);
+                if (!string.IsNullOrEmpty(news.Title))
+                {
+                    news.MetaTitle = StringExtensions.ToUnsignString(news.Title);
+                }
+                
                 news.LanguageCode = CultureName;
 
                 if (ModelState.IsValid)
@@ -84,7 +88,7 @@ namespace Nes.Web.Areas.Admin.Controllers
                         //}
 
                         unitOfWork.Save();
-                        this.SetNotification(Nes.Resources.NesResource.AdminCreateRecordSuccess, NotificationEnumeration.Success, true);
+                        //this.SetNotification(Nes.Resources.NesResource.AdminCreateRecordSuccess, NotificationEnumeration.Success, true);
                         return RedirectToAction("Index");
                     }
                 }
