@@ -31,6 +31,7 @@ namespace Nes.Web.Controllers
         }
 
         [ChildActionOnly]
+        [OutputCache(Duration = 3600*24)]
         public ActionResult Footer()
         {
             try

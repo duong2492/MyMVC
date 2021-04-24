@@ -19,7 +19,7 @@ namespace Nes.Web.Areas.Admin.Controllers
         UnitOfWork unitOfWork = new UnitOfWork(new DbContextFactory<NesDbContext>());
         //
         // GET: /Admin/Slide/
-        [OutputCache(Duration = 60)]
+        //  [OutputCache(Duration = 60)]
         public ActionResult Index()
         {
             var unitOfWork = new UnitOfWork(new DbContextFactory<NesDbContext>());
@@ -40,7 +40,7 @@ namespace Nes.Web.Areas.Admin.Controllers
 
         public ActionResult Create()
         {
-             BindingGroupDropDown();
+            BindingGroupDropDown();
             return View();
 
         }
@@ -55,21 +55,21 @@ namespace Nes.Web.Areas.Admin.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                        unitOfWork.GetRepository<Slide>().Create(slide);
-                        unitOfWork.Save();
-                        this.SetNotification(Nes.Resources.NesResource.AdminCreateRecordSuccess, NotificationEnumeration.Success, true);
-                        return RedirectToAction("Index");
+                    unitOfWork.GetRepository<Slide>().Create(slide);
+                    unitOfWork.Save();
+                    this.SetNotification(Nes.Resources.NesResource.AdminCreateRecordSuccess, NotificationEnumeration.Success, true);
+                    return RedirectToAction("Index");
                 }
                 else
                 {
-                    ModelState.AddModelError("", Nes.Resources.NesResource.ErrorCreateRecordMessage);
+                    //ModelState.AddModelError("", Nes.Resources.NesResource.ErrorCreateRecordMessage);
                 }
             }
             catch (Exception ex)
             {
                 logger.Error(ex);
                 HandleException(ex);
-
+                ModelState.AddModelError("", "Hệ thống có lỗi, vui lòng liên hệ admin");
             }
             BindingGroupDropDown();
             return View(slide);
@@ -85,14 +85,14 @@ namespace Nes.Web.Areas.Admin.Controllers
             try
             {
                 slide = unitOfWork.GetRepository<Slide>().GetById(id);
-               
+
             }
             catch (Exception ex)
             {
                 logger.Error(ex);
                 HandleException(ex);
             }
-             BindingGroupDropDown(slide.GroupID);
+            BindingGroupDropDown(slide.GroupID);
             return View(slide);
         }
 
@@ -106,14 +106,14 @@ namespace Nes.Web.Areas.Admin.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                        unitOfWork.GetRepository<Slide>().Update(slide);
-                        unitOfWork.Save();
-                        this.SetNotification(Nes.Resources.NesResource.AdminEditRecordSucess, NotificationEnumeration.Success, true);
-                        return RedirectToAction("Index");
+                    unitOfWork.GetRepository<Slide>().Update(slide);
+                    unitOfWork.Save();
+                    this.SetNotification(Nes.Resources.NesResource.AdminEditRecordSucess, NotificationEnumeration.Success, true);
+                    return RedirectToAction("Index");
                 }
                 else
                 {
-                    ModelState.AddModelError("", Nes.Resources.NesResource.ErrorCreateRecordMessage);
+                    //ModelState.AddModelError("", Nes.Resources.NesResource.ErrorCreateRecordMessage);
                 }
 
             }
@@ -121,9 +121,9 @@ namespace Nes.Web.Areas.Admin.Controllers
             {
                 logger.Error(ex);
                 HandleException(ex);
-
+                ModelState.AddModelError("", "Hệ thống có lỗi, vui lòng liên hệ admin");
             }
-           BindingGroupDropDown(slide.GroupID);
+            BindingGroupDropDown(slide.GroupID);
             return View(slide);
         }
 
@@ -137,9 +137,8 @@ namespace Nes.Web.Areas.Admin.Controllers
             {
                 if (ModelState.IsValid)
                 {
-
-                        unitOfWork.GetRepository<Slide>().Delete(id);
-                        unitOfWork.Save();
+                    unitOfWork.GetRepository<Slide>().Delete(id);
+                    unitOfWork.Save();
 
                 }
             }
@@ -150,9 +149,9 @@ namespace Nes.Web.Areas.Admin.Controllers
             }
             return RedirectToAction("Index");
         }
-        private void BindingGroupDropDown(string selectedID=null)
+        private void BindingGroupDropDown(string selectedID = null)
         {
-            ViewBag.Groups = new SelectList(unitOfWork.GetRepository<GroupSlide>().All().ToList(), "ID", "Name",selectedID);
+            ViewBag.Groups = new SelectList(unitOfWork.GetRepository<GroupSlide>().All().ToList(), "ID", "Name", selectedID);
         }
     }
 }

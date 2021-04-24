@@ -37,7 +37,7 @@ namespace Nes.Web
             routes.MapRouteLowercase(name: "Album", url: "album/{metatitle}-{id}", defaults: new { controller = "Collection", action = "Album", id = UrlParameter.Optional }, namespaces: new[] { "Nes.Web.Controllers" });
             //contact
             routes.MapRouteLowercase(name: "Contact", url: "contact", defaults: new { controller = "Contact", action = "Index" }, namespaces: new[] { "Nes.Web.Controllers" });
-            routes.MapRoute(name: "Default", url: "{controller}/{action}/{id}", defaults: new { controller = "Home", action = "Intro", id = UrlParameter.Optional }, namespaces: new[] { "Nes.Web.Controllers" });
+            routes.MapRoute(name: "Default", url: "{controller}/{action}/{id}", defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }, namespaces: new[] { "Nes.Web.Controllers" });
         }
     }
     public static class AreaRegistrationContextExtensions

@@ -26,12 +26,14 @@ namespace Nes.Dal.EntityModels
         [Display(Name = "MenuUrl", ResourceType = typeof(NesResource))]
         public string Link { get; set; }
 
-        [Required(ErrorMessageResourceType = typeof(NesResource), ErrorMessageResourceName = "MenuUrlRequired")]
+        [Required(ErrorMessage = "Yêu cầu chọn ảnh")]
         [Display(Name = "CategoryImages", ResourceType = typeof(NesResource))]
         public string Images { get; set; }
         [Required(ErrorMessageResourceType = typeof(NesResource), ErrorMessageResourceName = "MenuOrderRequired")]
         [Display(Name = "MenuOrder", ResourceType = typeof(NesResource))]
         public int Order { get; set; }
+
+
 
         [Display(Name = "MenuGroupID", ResourceType = typeof(NesResource))]
         public string GroupID { get; set; }

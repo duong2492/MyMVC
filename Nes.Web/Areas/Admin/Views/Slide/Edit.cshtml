@@ -31,13 +31,16 @@
                         @using (Html.BeginForm("Edit", "Slide", FormMethod.Post, new { @role = "form" }))
                         {
                             @Html.AntiForgeryToken()
-                            @Html.ValidationSummary(true)
+                            if (ViewContext.ViewData.ModelState.Count > 0)
+                            {
+                                @Html.ValidationSummary(false, "", new { @class = "alert alert-danger" })
+                            }
                             @Html.HiddenFor(model => model.ID)
-                             <div class="form-group">
+                            <div class="form-group">
                                 <label>  @Html.LabelFor(model => model.Name)</label>
 
                                 @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
-                                @Html.ValidationMessageFor(model => model.Name)
+                                @*@Html.ValidationMessageFor(model => model.Name)*@
                             </div>
                             <div class="form-group">
                                 <label>  @Html.LabelFor(model => model.Description)</label>
@@ -52,15 +55,15 @@
                                 </label>
 
                                 @Html.TextBoxFor(model => model.Link, new { @class = "form-control" })
-                                @Html.ValidationMessageFor(model => model.Link)
+                                @*@Html.ValidationMessageFor(model => model.Link)*@
                             </div>
-                              <div class="form-group">
+                            <div class="form-group">
                                 <label>
                                     @Html.LabelFor(model => model.Images)
                                 </label>
                                 @Html.TextBoxFor(model => model.Images, new { @class = "form-control", @id = "txtImgUrl" })
                                 <input type="button" id="btnSelectImg" class="btn btn-info" value="@Nes.Resources.NesResource.AdminSelectImageButtonText" />
-                                @Html.ValidationMessageFor(model => model.Images)
+                                @*@Html.ValidationMessageFor(model => model.Images)*@
                             </div>
                             <div class="form-group">
                                 <label>
@@ -68,7 +71,7 @@
                                 </label>
 
                                 @Html.TextBoxFor(model => model.Order, new { @class = "form-control" })
-                                @Html.ValidationMessageFor(model => model.Order)
+                                @*@Html.ValidationMessageFor(model => model.Order)*@
                             </div>
                             <div class="form-group">
                                 <label>
@@ -77,12 +80,12 @@
                                 @Html.CheckBoxFor(model => model.Status, new { @checked = "checked" })
                                 @Html.ValidationMessageFor(model => model.Status)
                             </div>
-                             <div class="form-group">
+                            <div class="form-group">
                                 <label>@Html.LabelFor(model => model.GroupID)</label>
                                 @Html.DropDownListFor(model => model.GroupID, (SelectList)ViewBag.Groups, @Nes.Resources.NesResource.AdminEmptyGroupSelectionText, new { @class = "form-control" })
                             </div>
 
-                            <button type="submit" class="btn btn-default">@Nes.Resources.NesResource.AdminSaveButtonText</button>
+                            <button type="submit" class="btn btn-success">@Nes.Resources.NesResource.AdminSaveButtonText</button>
 
                             @Html.ActionLink(@Nes.Resources.NesResource.GoBackToListText, "Index");
                         }
