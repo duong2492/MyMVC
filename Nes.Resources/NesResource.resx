@@ -573,6 +573,9 @@
   <data name="ErrorPageTitle" xml:space="preserve">
     <value>Trung tâm thông báo sự cố</value>
   </data>
+  <data name="ErrorSystem" xml:space="preserve">
+    <value>Hệ thống có lỗi, vui lòng liên hệ admin !</value>
+  </data>
   <data name="ErrorValidForm" xml:space="preserve">
     <value>Thông tin trên form chưa đúng.</value>
   </data>

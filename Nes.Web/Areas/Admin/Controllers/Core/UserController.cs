@@ -29,7 +29,12 @@ namespace Nes.Web.Areas.Admin.Controllers
 
         //
         // GET: /Admin/User/Create
+        public ActionResult ChangePassword()
+        {
+            return View();
+        }
 
+        //
         public ActionResult Create()
         {
             return View();
@@ -86,7 +91,7 @@ namespace Nes.Web.Areas.Admin.Controllers
             {
                 logger.Error(ex);
                 HandleException(ex);
-                ModelState.AddModelError("", "Hệ thống có lỗi, vui lòng liên hệ admin");
+                ModelState.AddModelError("", Nes.Resources.NesResource.ErrorSystem);
             }
             return View(user);
         }
@@ -146,6 +151,53 @@ namespace Nes.Web.Areas.Admin.Controllers
             return View(user);
         }
 
+
+        [AcceptVerbs(HttpVerbs.Post)]
+        [ValidateAntiForgeryToken]
+        public ActionResult ChangePassword(string passwordOld, string passwordOldRepeat, string passwordNew)
+        {
+            var unitOfWork = new UnitOfWork(new DbContextFactory<NesDbContext>());
+            User user = null;
+            try
+            {
+                var oldPass = SecurityHelper.MD5Hash(passwordOld.Trim());
+                user = unitOfWork.GetRepository<User>().GetById(User.Identity.Name);
+                if (user.Password == oldPass)
+                {
+                    if (passwordOld != passwordNew)
+                    {
+                        if (passwordOldRepeat != passwordOld)
+                        {
+                            ModelState.AddModelError("", "Nhập lại mật khẩu cũ chưa chính xác");
+                        }
+                        else
+                        {
+                            user.Password = SecurityHelper.MD5Hash(passwordNew.Trim());
+                            unitOfWork.GetRepository<User>().Update(user);
+                            unitOfWork.Save();
+                            this.SetNotification(Nes.Resources.NesResource.AdminEditRecordSucess, NotificationEnumeration.Success, true);
+                            //  return RedirectToAction("Index");
+                        }
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Mật khẩu mới không được giống mật khẩu hiện tại");
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Mật khẩu cũ nhập chưa đúng");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex);
+                HandleException(ex);
+                ModelState.AddModelError("", Nes.Resources.NesResource.ErrorSystem);
+            }
+            return View(user);
+        }
         //
         // GET: /Admin/User/Delete/5
         [HttpDelete]

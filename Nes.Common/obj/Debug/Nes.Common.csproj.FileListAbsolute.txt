@@ -39,3 +39,4 @@ D:\Freelancer Code\MVC_BASE\Nes.Common\obj\Debug\Nes.Common.csproj.CoreCompileIn
 D:\Freelancer Code\MVC_BASE\Nes.Common\obj\Debug\Nes.Common.csproj.CopyComplete
 D:\Freelancer Code\MVC_BASE\Nes.Common\obj\Debug\Nes.Common.dll
 D:\Freelancer Code\MVC_BASE\Nes.Common\obj\Debug\Nes.Common.pdb
+D:\Freelancer Code\MVC_BASE\Nes.Common\obj\Debug\Nes.Common.csprojAssemblyReference.cache

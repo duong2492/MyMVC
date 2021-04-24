@@ -68,7 +68,7 @@ namespace Nes.Web.Areas.Admin.Controllers
             {
                 logger.Error(ex);
                 HandleException(ex);
-                ModelState.AddModelError("", "Hệ thống có lỗi, vui lòng liên hệ admin");
+                ModelState.AddModelError("", Nes.Resources.NesResource.ErrorSystem);
             }
             return View(news);
         }
@@ -126,7 +126,7 @@ namespace Nes.Web.Areas.Admin.Controllers
             {
                 logger.Error(ex);
                 HandleException(ex);
-                ModelState.AddModelError("", "Hệ thống có lỗi, vui lòng liên hệ admin");
+                ModelState.AddModelError("", Nes.Resources.NesResource.ErrorSystem);
 
             }
             return View(news);

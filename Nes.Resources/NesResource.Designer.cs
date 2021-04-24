@@ -1429,6 +1429,15 @@ namespace Nes.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hệ thống có lỗi, vui lòng liên hệ admin !.
+        /// </summary>
+        public static string ErrorSystem {
+            get {
+                return ResourceManager.GetString("ErrorSystem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Thông tin trên form chưa đúng..
         /// </summary>
         public static string ErrorValidForm {

@@ -30,3 +30,4 @@ D:\Freelancer Code\MVC_BASE\Nes.Resources\obj\Debug\Nes.Resources.csproj.Generat
 D:\Freelancer Code\MVC_BASE\Nes.Resources\obj\Debug\Nes.Resources.csproj.CoreCompileInputs.cache
 D:\Freelancer Code\MVC_BASE\Nes.Resources\obj\Debug\Nes.Resources.dll
 D:\Freelancer Code\MVC_BASE\Nes.Resources\obj\Debug\Nes.Resources.pdb
+D:\Freelancer Code\MVC_BASE\Nes.Resources\obj\Debug\Nes.Resources.csprojAssemblyReference.cache

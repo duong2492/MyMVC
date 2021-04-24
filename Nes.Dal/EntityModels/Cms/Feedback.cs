@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nes.Resources;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -13,7 +14,7 @@ namespace Nes.Dal.EntityModels
         [Key]
         [Display(Name = "FeedbackID", ResourceType = typeof(Resources.NesResource))]
         public long ID { set; get; }
-        [Required]
+        [Required(ErrorMessage = "Chưa nhập họ tên !")]
         [Display(Name = "FeedbackName", ResourceType = typeof(Resources.NesResource))]
         public string Name { set; get; }
         [Display(Name = "FeedbackCompany", ResourceType = typeof(Resources.NesResource))]
@@ -22,13 +23,14 @@ namespace Nes.Dal.EntityModels
         public string Address { set; get; }
         [Display(Name = "FeedbackPhone", ResourceType = typeof(Resources.NesResource))]
         public string Phone { set; get; }
+
         [Display(Name = "FeedbackEmail", ResourceType = typeof(Resources.NesResource))]
-        [Required]
+        [Required(ErrorMessage = "Chưa nhập email !")]
         public string Email { set; get; }
         [Display(Name = "FeedbackTitle", ResourceType = typeof(Resources.NesResource))]
         public string Title { set; get; }
         [Display(Name = "FeedbackMessage", ResourceType = typeof(Resources.NesResource))]
-        [Required]
+        [Required(ErrorMessage = "Chưa nhập nội dung liên hệ !")]
         public string Message { set; get; }
         [Display(Name = "FeedbackCreatedDate", ResourceType = typeof(Resources.NesResource))]
         [Required]

@@ -62,7 +62,7 @@ namespace Nes.Web.Areas.Admin.Controllers
             {
                 logger.Error(ex);
                 HandleException(ex);
-                ModelState.AddModelError("", "Hệ thống có lỗi, vui lòng liên hệ admin");
+                ModelState.AddModelError("", Nes.Resources.NesResource.ErrorSystem);
             }
             PopulateParentIDDropDownList();
             return View(category);
@@ -115,7 +115,7 @@ namespace Nes.Web.Areas.Admin.Controllers
             {
                 logger.Error(ex);
                 HandleException(ex);
-                ModelState.AddModelError("", "Hệ thống có lỗi, vui lòng liên hệ admin");
+                ModelState.AddModelError("", Nes.Resources.NesResource.ErrorSystem);
             }
             PopulateParentIDDropDownList(category.ParentID);
             return View(category);

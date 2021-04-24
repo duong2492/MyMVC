@@ -281,6 +281,7 @@
     <Folder Include="Data\flash\" />
     <Folder Include="Filters\" />
     <Folder Include="Images\" />
+    <Folder Include="Views\Feedback\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\Views\Account\Login.cshtml" />
@@ -426,12 +427,13 @@
     <Content Include="Areas\Admin\Views\About\Create.cshtml" />
     <Content Include="Areas\Admin\Views\About\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\User\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\User\ChangePassword.cshtml" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\nes.pubxml" />
     <Content Include="Views\Product\ProductByCate.cshtml" />
     <Content Include="Views\Content\Detail.cshtml" />
     <Content Include="Views\Content\NewsByCate.cshtml" />
-    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Contact\Create.cshtml" />
     <Content Include="Views\Collection\Index.cshtml" />
     <Content Include="Views\Collection\Album.cshtml" />
     <Content Include="Views\Shared\AlbumList.cshtml" />

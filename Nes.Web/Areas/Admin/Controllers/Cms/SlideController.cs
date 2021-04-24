@@ -69,7 +69,7 @@ namespace Nes.Web.Areas.Admin.Controllers
             {
                 logger.Error(ex);
                 HandleException(ex);
-                ModelState.AddModelError("", "Hệ thống có lỗi, vui lòng liên hệ admin");
+                ModelState.AddModelError("", Nes.Resources.NesResource.ErrorSystem);
             }
             BindingGroupDropDown();
             return View(slide);
@@ -121,7 +121,7 @@ namespace Nes.Web.Areas.Admin.Controllers
             {
                 logger.Error(ex);
                 HandleException(ex);
-                ModelState.AddModelError("", "Hệ thống có lỗi, vui lòng liên hệ admin");
+                ModelState.AddModelError("", Nes.Resources.NesResource.ErrorSystem);
             }
             BindingGroupDropDown(slide.GroupID);
             return View(slide);
