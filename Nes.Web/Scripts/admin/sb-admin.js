@@ -4,8 +4,6 @@ $(function () {
     $('#side-menu li').each(function () {
         var li = $(this);
         var a = $('a', li);
-        var ul = li.closest('ul');
-        console.log(ul)
         var pathname = window.location.href;
         if (pathname.indexOf(a.attr("href")) != -1) {
             a.addClass('active');
