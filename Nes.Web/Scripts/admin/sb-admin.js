@@ -1,23 +1,28 @@
-$(function() {
+$(function () {
 
     $('#side-menu').metisMenu();
     $('#side-menu li').each(function () {
         var li = $(this);
         var a = $('a', li);
+        var ul = li.closest('ul');
+        console.log(ul)
         var pathname = window.location.href;
-        if (pathname.indexOf(a.attr("href")) !=-1) {
-            li.addClass('active');
+        if (pathname.indexOf(a.attr("href")) != -1) {
+            a.addClass('active');
+            $(this).closest('ul').addClass('in');
         }
-        else
-            li.removeClass('active');
+        else {
+            a.removeClass('active');
+            //ul.removeClass('in');
+        }
     });
 });
 
 
 //Loads the correct sidebar on window load,
 //collapses the sidebar on window resize.
-$(function() {
-    $(window).bind("load resize", function() {
+$(function () {
+    $(window).bind("load resize", function () {
         console.log($(this).width())
         if ($(this).width() < 768) {
             $('div.sidebar-collapse').addClass('collapse')
