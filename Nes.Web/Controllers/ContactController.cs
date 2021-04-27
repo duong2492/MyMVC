@@ -19,6 +19,7 @@ namespace Nes.Web.Controllers
         public ActionResult Index()
         {
             ViewBag.Title = "Liên hệ";
+            ViewBag.LienHe = "ok chưa";
             return View();
         }
         //

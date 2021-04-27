@@ -1,4 +1,4 @@
-﻿@model Nes.Dal.EntityModels.Contact
+﻿@model Nes.Dal.EntityModels.Feedback
 
 @{
     ViewBag.Title = "Index";
@@ -17,13 +17,13 @@
     <div class="rwidth page-lienhe" id="main-content">
         @{Html.RenderAction("NewsCates", "Content");}
         <div id="right-cate-tin">
-            <div class="showroom" style="margin-top:10px">@ViewBag.LienHe</div>
+            <div class="showroom" style="margin-top:10px">@Html.Raw(ViewBag.ContentHtml)</div>
             <div class="wpcf7" id="wpcf7-f195-p15-o1">
                 @if (TempData["Notification"] != null)
                 {
                     @TempData["Notification"]
                 }
-                @using (Html.BeginForm("Create", "Contact", FormMethod.Post, new { @role = "form" }))
+                @using (Html.BeginForm("Create", "Feedback", FormMethod.Post, new { @role = "form" }))
                 {
                     @Html.AntiForgeryToken()
                     if (ViewContext.ViewData.ModelState.Count > 0)

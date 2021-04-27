@@ -13,12 +13,26 @@ namespace Nes.Web.Controllers
 {
     public class FeedbackController : BaseController
     {
+        UnitOfWork unitOfWork = new UnitOfWork(new DbContextFactory<NesDbContext>());
         private static readonly ILog logger = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         public ActionResult Index()
         {
+            ViewBag.Title = "Liên hệ";
+            ViewBag.LienHe = "ok chưa";
             return View();
         }
-
+        public void SetViewBag()
+        {
+            var model = unitOfWork.GetRepository<Contact>()
+             .Get(x => x.Status && x.LanguageCode.Equals(CultureName))
+             .SingleOrDefault();
+            ViewBag.ContentHtml = model.ContentHtml;
+        }
+        public ActionResult Create()
+        {
+            SetViewBag();
+            return View();
+        }
         [HttpPost]
         public ActionResult Create(Feedback feedback)
         {
@@ -33,15 +47,17 @@ namespace Nes.Web.Controllers
                     {
                         unitOfWork.GetRepository<Feedback>().Create(feedback);
                         unitOfWork.Save();
+
                         TempData["Notification"] = "Gửi thông tin phản hồi thành công. Xin cảm ơn";
-                        return RedirectToAction("Index","Contact");
+                        return RedirectToAction("Create", "Feedback");
                     }
 
                 }
                 else
                 {
-                    ModelState.AddModelError("", Nes.Resources.NesResource.ErrorCreateRecordMessage);
+                   // ModelState.AddModelError("", Nes.Resources.NesResource.ErrorCreateRecordMessage);
                 }
+                SetViewBag();
             }
             catch (Exception ex)
             {

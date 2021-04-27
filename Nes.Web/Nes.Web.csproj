@@ -281,7 +281,6 @@
     <Folder Include="Data\flash\" />
     <Folder Include="Filters\" />
     <Folder Include="Images\" />
-    <Folder Include="Views\Feedback\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\Views\Account\Login.cshtml" />
@@ -442,6 +441,7 @@
     <Content Include="Views\Shared\AboutCates.cshtml" />
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\About\Details.cshtml" />
+    <Content Include="Views\Feedback\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
